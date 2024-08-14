@@ -1,8 +1,13 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+import React, { useState } from "react";
 import { useEffect } from "react";
 const Navbar = () => {
+  const [isActive, setIsActive] = useState(false);
+  const handleMenuClick = () => {
+    setIsActive(!isActive);
+  };
   useEffect(() => {
     const accordions = document.querySelectorAll(".accordion-item");
     accordions.forEach((item) => {
@@ -124,6 +129,20 @@ const Navbar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event: any) => {
+      if (!event.target.closest(".menu-block")) {
+        setIsActive(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isActive]);
+
   return (
     <>
       {/*...::: Header Start :::... */}
@@ -134,52 +153,62 @@ const Navbar = () => {
         <div className="container-default">
           <div className="flex items-center justify-between gap-x-8">
             {/* Header Logo */}
-            <a href="index.html" className="">
-              <Image
-                src="/assets/img/logo.png"
-                alt="Orderfiti"
-                width={96}
-                height={100}
-                className="w-32"
-              />
-            </a>
+            <Link className="" href="/">
+              <h1 className="text-4xl">AfriJour</h1>
+              {/* <Image
+                src="assets/img/logo-violet-dark.png"
+                alt="Masco"
+                width={109}
+                height={24}
+              /> */}
+            </Link>
             {/* Header Logo */}
             {/* Header Navigation */}
             <div className="menu-block-wrapper">
-              <div className="menu-overlay" />
-              <nav className="menu-block" id="append-menu-header">
+              <div className={`menu-overlay ${isActive ? "active" : ""}`} />
+              <nav
+                className={`menu-block ${isActive ? "active" : ""}`}
+                id="append-menu-header"
+              >
                 <div className="mobile-menu-head">
                   <div className="go-back">
                     <i className="fa-solid fa-angle-left" />
                   </div>
                   <div className="current-menu-title" />
-                  <div className="mobile-menu-close">×</div>
+                  <div className="mobile-menu-close" onClick={handleMenuClick}>
+                    ×
+                  </div>
                 </div>
                 <ul className="site-menu-main">
-                  <li className="nav-item nav-item-has-children">
-                    <a className="nav-link-item drop-trigger" href="/">
+                  <li className="nav-item">
+                    <Link className="nav-link-item" href="/">
                       Home
-                    </a>
+                    </Link>
                   </li>
-                  <li className="nav-item nav-item-has-children">
-                    <a href="#about" className="nav-link-item drop-trigger">
-                      About
-                    </a>
-                  </li>
-                  <li className="nav-item nav-item-has-children">
-                    <a href="#features" className="nav-link-item drop-trigger">
+                  <li className="nav-item">
+                    <Link className="nav-link-item" href="#features">
                       Features
-                    </a>
+                    </Link>
                   </li>
-                  <li className="nav-item nav-item-has-children">
-                    <a href="#faq" className="nav-link-item drop-trigger">
+                  <li className="nav-item">
+                    <Link className="nav-link-item" href="#about">
+                      About
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link-item" href="#journals">
+                      Journals
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link-item" href="#testimonials">
+                      Testimonials
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link-item" href="#faq">
                       FAQ
-                    </a>
-                  </li>
-                  <li className="nav-item nav-item-has-children">
-                    <a href="#contact" className="nav-link-item drop-trigger">
-                      Contact
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
@@ -187,20 +216,25 @@ const Navbar = () => {
             {/* Header Navigation */}
             {/* Header User Event */}
             <div className="flex items-center gap-6">
-              <a
-                href="signup.html"
-                className="group relative z-10 hidden sm:inline-block"
+              {/* <Link
+                className="btn-text hidden hover:text-ColorViolet sm:inline-block"
+                href="/login"
               >
-                <div className="btn is-rounded btn-animation group is-lime">
-                  Sign up free
-                </div>
-                <div className="is-rounded absolute inset-0 -z-10 translate-x-[5px] translate-y-[5px] bg-ColorLime transition-all duration-300 ease-linear group-hover:translate-x-0 group-hover:translate-y-0" />
-              </a>
+                Login
+              </Link> */}
+              <Link
+                className="group relative hidden sm:inline-block"
+                href="/signup"
+              >
+                <div className="btn is-rounded is-violet">Dashboard</div>
+                <div className="is-rounded absolute inset-0 -z-10 translate-y-[5px] bg-ColorBlack transition-all duration-300 ease-linear group-hover:translate-y-0" />
+              </Link>
               {/* Responsive Offcanvas Menu Button */}
               <div className="block lg:hidden">
                 <button
                   id="openBtn"
                   className="hamburger-menu mobile-menu-trigger"
+                  onClick={handleMenuClick}
                 >
                   <span />
                   <span />

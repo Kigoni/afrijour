@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { useEffect } from "react";
 import Link from "next/link";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   useEffect(() => {
@@ -35,100 +36,7 @@ export default function Home() {
   return (
     <div className="page-wrapper relative z-[1] bg-white">
       {/*...::: Header Start :::... */}
-      <header
-        className="site-header site-header--absolute is--white py-3"
-        id="sticky-menu"
-      >
-        <div className="container-default">
-          <div className="flex items-center justify-between gap-x-8">
-            {/* Header Logo */}
-            <Link className="" href="/">
-              <h1 className="text-4xl">AfriJour</h1>
-              {/* <Image
-                src="assets/img/logo-violet-dark.png"
-                alt="Masco"
-                width={109}
-                height={24}
-              /> */}
-            </Link>
-            {/* Header Logo */}
-            {/* Header Navigation */}
-            <div className="menu-block-wrapper">
-              <div className="menu-overlay" />
-              <nav className="menu-block" id="append-menu-header">
-                <div className="mobile-menu-head">
-                  <div className="go-back">
-                    <i className="fa-solid fa-angle-left" />
-                  </div>
-                  <div className="current-menu-title" />
-                  <div className="mobile-menu-close">×</div>
-                </div>
-                <ul className="site-menu-main">
-                  <li className="nav-item">
-                    <Link className="nav-link-item" href="/">
-                      Home
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link-item" href="#features">
-                      Features
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link-item" href="#about">
-                      About
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link-item" href="#journals">
-                      Journals
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link-item" href="#testimonials">
-                      Testimonials
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link-item" href="#faq">
-                      FAQ
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            {/* Header Navigation */}
-            {/* Header User Event */}
-            <div className="flex items-center gap-6">
-              {/* <Link
-                className="btn-text hidden hover:text-ColorViolet sm:inline-block"
-                href="/login"
-              >
-                Login
-              </Link> */}
-              <Link
-                className="group relative hidden sm:inline-block"
-                href="/signup"
-              >
-                <div className="btn is-rounded is-violet">Dashboard</div>
-                <div className="is-rounded absolute inset-0 -z-10 translate-y-[5px] bg-ColorBlack transition-all duration-300 ease-linear group-hover:translate-y-0" />
-              </Link>
-              {/* Responsive Offcanvas Menu Button */}
-              <div className="block lg:hidden">
-                <button
-                  id="openBtn"
-                  className="hamburger-menu mobile-menu-trigger"
-                >
-                  <span />
-                  <span />
-                  <span />
-                </button>
-              </div>
-            </div>
-            {/* Header User Event */}
-          </div>
-        </div>
-      </header>
+      <Navbar />
       {/*...::: Header End :::... */}
       <main className="main-wrapper relative overflow-hidden">
         {/*...::: Hero Section Start :::... */}
