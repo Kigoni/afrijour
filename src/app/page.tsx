@@ -60,7 +60,10 @@ export default function Home() {
                       platform where their unique narratives and perspectives
                       can shine brightly.
                     </p>
-                    <Link href="#" className="group relative inline-block">
+                    <Link
+                      href="https://afrijour-dashboard.vercel.app/"
+                      className="group relative inline-block"
+                    >
                       <div className="btn is-large is-rounded is-violet">
                         Get Started Now
                       </div>
@@ -323,9 +326,12 @@ export default function Home() {
                     meticulously evaluate each submission.
                   </p>
                   <div className="mt-[50px]">
-                    <Link href="#" className="group relative z-10 inline-block">
+                    <Link
+                      href="https://afrijour-dashboard.vercel.app/"
+                      className="group relative z-10 inline-block"
+                    >
                       <div className="btn is-large is-rounded is-violet">
-                        Explore more
+                        Explore More
                       </div>
                       <div className="is-rounded absolute inset-0 -z-10 translate-y-[5px] bg-ColorBlack transition-all duration-300 ease-linear group-hover:translate-y-0" />
                     </Link>
@@ -394,9 +400,12 @@ export default function Home() {
                     encouraged.
                   </p>
                   <div className="mt-[50px]">
-                    <Link href="#" className="group relative z-10 inline-block">
+                    <Link
+                      href="https://afrijour-dashboard.vercel.app/analytics"
+                      className="group relative z-10 inline-block"
+                    >
                       <div className="btn is-large is-rounded is-violet">
-                        Explore more
+                        Explore More
                       </div>
                       <div className="is-rounded absolute inset-0 -z-10 translate-y-[5px] bg-ColorBlack transition-all duration-300 ease-linear group-hover:translate-y-0" />
                     </Link>
@@ -1193,7 +1202,10 @@ export default function Home() {
                     </li>
                   </ul>
                   <div className="mt-[50px]">
-                    <Link href="#" className="group relative z-10 inline-block">
+                    <Link
+                      href="https://afrijour-dashboard.vercel.app/"
+                      className="group relative z-10 inline-block"
+                    >
                       <div className="btn is-large is-rounded is-violet">
                         Go to Dashboard
                       </div>
