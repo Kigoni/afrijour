@@ -22,7 +22,7 @@ type CountryInfo = {
 };
 
 const geoUrl =
-  "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson";
+  "https://raw.githubusercontent.com/datasets/geo-boundaries-world-110m/master/countries.geojson";
 
 const journalData: JournalData = {
   // Europe

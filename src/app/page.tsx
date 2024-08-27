@@ -1663,7 +1663,7 @@ export default function Home() {
                       <li>
                         <Link
                           className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
-                          href="/about"
+                          href="/about#"
                         >
                           About Us
                         </Link>
@@ -1671,7 +1671,7 @@ export default function Home() {
                       <li>
                         <Link
                           className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
-                          href="/services"
+                          href="/services#"
                         >
                           Services
                         </Link>
@@ -1679,7 +1679,7 @@ export default function Home() {
                       <li>
                         <Link
                           className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
-                          href="/pricing"
+                          href="/pricing#"
                         >
                           pricing
                         </Link>
@@ -1687,7 +1687,7 @@ export default function Home() {
                       <li>
                         <Link
                           className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
-                          href="/contact"
+                          href="/contact#"
                         >
                           Contact
                         </Link>
