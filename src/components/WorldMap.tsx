@@ -6,7 +6,7 @@ import {
   Sphere,
   Graticule,
 } from "react-simple-maps";
-// import { Tooltip } from "@/components/ui/tooltip";
+import { Tooltip, TooltipProvider } from "@/components/ui/tooltip";
 
 type JournalData = {
   [countryCode: string]: {
@@ -91,11 +91,11 @@ const WorldMap: React.FC = () => {
   }, []);
 
   const handleMouseEnter = (geo: any) => {
-    const { ISO_A3 } = geo.properties;
-    const countryData = journalData[ISO_A3];
+    const propGeo = geo.properties;
+    const countryData = journalData[propGeo.iso_a3];
     if (countryData) {
       setTooltipContent({
-        countryName: geo.properties.NAME,
+        countryName: propGeo.name,
         journalCount: countryData.journalCount,
         topJournal: countryData.topJournal,
       });
@@ -145,15 +145,17 @@ const WorldMap: React.FC = () => {
           </Geographies>
           {/* </ZoomableGroup> */}
         </ComposableMap>
-        {/* {tooltipContent && (
-        <Tooltip>
-          <div className="p-2">
-            <h3 className="font-bold">{tooltipContent.countryName}</h3>
-            <p>Number of Journals: {tooltipContent.journalCount}</p>
-            <p>Top Journal: {tooltipContent.topJournal}</p>
-          </div>
-        </Tooltip>
-      )} */}
+        {tooltipContent && (
+          <TooltipProvider>
+            <Tooltip>
+              <div className="p-2">
+                <h3 className="font-bold">{tooltipContent.countryName}</h3>
+                <p>Number of Journals: {tooltipContent.journalCount}</p>
+                <p>Top Journal: {tooltipContent.topJournal}</p>
+              </div>
+            </Tooltip>
+          </TooltipProvider>
+        )}
       </div>
     </div>
   );
