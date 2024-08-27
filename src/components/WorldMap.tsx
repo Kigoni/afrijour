@@ -119,7 +119,12 @@ const WorldMap: React.FC = () => {
           }}
         >
           {/* <ZoomableGroup center={[0, 20]} zoom={1}> */}
-          <Sphere stroke="#E4E5E6" strokeWidth={0.5} id={""} fill={""} />
+          <Sphere
+            stroke="#E4E5E6"
+            strokeWidth={0.5}
+            id="sphere"
+            fill={"#FFFFFF"}
+          />
           <Graticule stroke="#E4E5E6" strokeWidth={0.5} />
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
@@ -130,7 +135,7 @@ const WorldMap: React.FC = () => {
                   onMouseEnter={() => handleMouseEnter(geo)}
                   onMouseLeave={handleMouseLeave}
                   style={{
-                    default: { fill: "#F5EFEB" },
+                    default: { fill: "#f1dccd" },
                     hover: { fill: "#4b2aad" },
                     pressed: { fill: "#4b2aad" },
                   }}
