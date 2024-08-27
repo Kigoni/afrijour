@@ -13,6 +13,7 @@ import {
 import { useEffect } from "react";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
+import WorldMap from "@/components/WorldMap";
 
 export default function Home() {
   useEffect(() => {
@@ -1547,6 +1548,9 @@ export default function Home() {
                     anywhere to experience an exclusive e-learning platform for
                     world-class education.
                   </p>
+                </div>
+                <div className="mb-40">
+                  <WorldMap />
                 </div>
                 {/* Newsletter Area */}
               </div>
