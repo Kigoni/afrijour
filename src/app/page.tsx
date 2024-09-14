@@ -10,12 +10,25 @@ import {
   Star,
   Twitter,
 } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
 import WorldMap from "@/components/WorldMap";
+import { Language, translations } from "@/data/content";
+
 
 export default function Home() {
+
+
+    const [selectedLanguage, setSelectedLanguage] = useState('en');
+    const [translation, setTranslation] = useState(translations.en);
+
+  
+    const handleLanguageChange = (languageCode: string) => {
+      setSelectedLanguage(languageCode);
+      setTranslation(translations[languageCode]);
+    };
+  
   useEffect(() => {
     const initJOS = () => {
       const options = {
@@ -37,7 +50,7 @@ export default function Home() {
   return (
     <div className="page-wrapper relative z-[1] bg-white">
       {/*...::: Header Start :::... */}
-      <Navbar />
+      <Navbar setSelectedLanguage={handleLanguageChange}  selectedLanguage={selectedLanguage}/>
       {/*...::: Header End :::... */}
       <main className="main-wrapper relative overflow-hidden">
         {/*...::: Hero Section Start :::... */}
@@ -52,21 +65,17 @@ export default function Home() {
                   {/* Hero Content Block */}
                   <div className="mx-auto max-w-[580px] text-center lg:max-w-none lg:text-left">
                     <h1 className="mb-6 font-DmSans text-[32px] font-bold leading-[1.04] -tracking-[1px] sm:text-5xl lg:text-[65px] xl:text-[78px] xxl:text-[90px]">
-                      Spotlighting African Journals
+                      {translation.hero.title}
                     </h1>
                     <p className="mb-8 lg:mb-[50px]">
-                      Welcome to AfriJour, your gateway to the rich and diverse
-                      world of African scholarship. We are dedicated to
-                      amplifying the voices of African journals, offering a
-                      platform where their unique narratives and perspectives
-                      can shine brightly.
+                      {translation.hero.subtitle}
                     </p>
                     <Link
                       href="https://afrijour-dashboard.vercel.app/"
                       className="group relative inline-block"
                     >
                       <div className="btn is-large is-rounded is-violet">
-                        Get Started Now
+                        {translation.hero.cta}
                       </div>
                       <div className="is-rounded absolute inset-0 -z-10 translate-y-[5px] bg-ColorBlack transition-all duration-300 ease-linear group-hover:translate-y-0" />
                     </Link>
@@ -83,16 +92,16 @@ export default function Home() {
                         className="max-w-full rounded-full"
                       />
                       {/* Hero Image Shape */}
-                      <div className="absolute right-0 top-1 flex h-[150px] w-[150px] items-center justify-center text-center xl:left-[320px]">
+                      <div className="absolute right-0 top-1 flex h-[180px] w-[180px] items-center justify-center text-center xl:left-[320px]">
                         <Image
                           src="assets/img/elements/hero-4-start-shape-1.svg"
                           alt="hero-4-start-shape-1"
-                          width={150}
-                          height={150}
+                          width={180}
+                          height={180}
                           className="rotate-360"
                         />
                         <span className="absolute inline-block max-w-[100px] text-base font-bold text-ColorBlack">
-                          Latest Journals are available
+                         {translation.hero.promo}
                         </span>
                       </div>
                     </div>
@@ -138,7 +147,7 @@ export default function Home() {
                   {/* Section Content Block */}
                   <div className="mx-auto max-w-[636px]">
                     <h2 className="text-center font-DmSans -tracking-[1px]">
-                      Special features that make AfriJour the best
+                      {translation.features.title}
                     </h2>
                   </div>
                   {/* Section Content Block */}
@@ -165,11 +174,10 @@ export default function Home() {
                         className="mb-[30px] h-[70px] w-auto"
                       />
                       <div className="mb-4 text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
-                        Journals
+                        {translation.features.items[0].title}
                       </div>
                       <p className="line-clamp-3">
-                        A diverse collection of African journals from various
-                        disciplines, hosted on our platform.
+                      {translation.features.items[0].description}
                       </p>
                     </div>
                   </div>
@@ -193,11 +201,10 @@ export default function Home() {
                         className="mb-[30px] h-[70px] w-auto"
                       />
                       <div className="mb-4 text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
-                        Repositories
+                      {translation.features.items[1].title}
                       </div>
                       <p className="line-clamp-3">
-                        Secure and stable platforms for hosting journals,
-                        ensuring their long-term preservation and accessibility.
+                      {translation.features.items[1].description}
                       </p>
                     </div>
                   </div>
@@ -221,12 +228,10 @@ export default function Home() {
                         className="mb-[30px] h-[70px] w-auto"
                       />
                       <div className="mb-4 text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
-                        Indexes
+                      {translation.features.items[2].title}
                       </div>
                       <p className="line-clamp-3">
-                        African Journals Indexers that increase visibility and
-                        accessibility of African journals in the global
-                        scholarly community.
+                      {translation.features.items[2].description}
                       </p>
                     </div>
                   </div>
@@ -250,12 +255,10 @@ export default function Home() {
                         className="mb-[30px] h-[70px] w-auto"
                       />
                       <div className="mb-4 text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
-                        Reviewers
+                      {translation.features.items[3].title}
                       </div>
                       <p className="line-clamp-3">
-                        African scholars who contribute to the peer review
-                        process, ensuring high-quality standards and rigorous
-                        academic discourse.
+                          {translation.features.items[3].description}
                       </p>
                     </div>
                   </div>
@@ -303,28 +306,17 @@ export default function Home() {
                     {/* Section Block */}
                     <div className="mb-5">
                       <h2 className="font-DmSans -tracking-[1px]">
-                        Discover the Vibrant Tapestry of African Knowledge
+                        {translation.about.title}
                       </h2>
                     </div>
                     {/* Section Block */}
                   </div>
                   {/* Section Wrapper */}
                   <p>
-                    At AfriJour, we believe that African scholarship deserves a
-                    prominent place on the global stage. Our platform is
-                    committed to showcasing the intellectual richness and
-                    diversity emanating from the African continent. Through
-                    innovative analytics and dedicated curation, we empower
-                    African scholars and researchers, fostering global
-                    collaboration and knowledge exchange.
+                   {translation.about.description}
                   </p>
                   <p>
-                    Our innovative indexing system ensures that the wealth of
-                    African academic work is organized and easily searchable,
-                    facilitating efficient discovery of relevant content. To
-                    uphold the integrity and quality of the research we feature,
-                    AfriJour relies on a dedicated team of Reviewers who
-                    meticulously evaluate each submission.
+                   {translation.about.description2}
                   </p>
                   <div className="mt-[50px]">
                     <Link
@@ -332,7 +324,7 @@ export default function Home() {
                       className="group relative z-10 inline-block"
                     >
                       <div className="btn is-large is-rounded is-violet">
-                        Explore More
+                       {translation.about.cta}
                       </div>
                       <div className="is-rounded absolute inset-0 -z-10 translate-y-[5px] bg-ColorBlack transition-all duration-300 ease-linear group-hover:translate-y-0" />
                     </Link>
@@ -378,27 +370,17 @@ export default function Home() {
                     {/* Section Block */}
                     <div className="mb-5">
                       <h2 className="font-DmSans -tracking-[1px]">
-                        Empowering African Scholars, Researchers and Professors.
+                      {translation.about2.title}
                       </h2>
                     </div>
                     {/* Section Block */}
                   </div>
                   {/* Section Wrapper */}
                   <p>
-                    At AfriJour, our mission is to elevate and support African
-                    scholars, researchers, and professors by providing a
-                    platform that amplifies their contributions and enhances
-                    their global impact. We offer extensive access to a wide
-                    range of African journals and research publications,
-                    ensuring that their work gains the visibility it deserves.
+                  {translation.about2.description}
                   </p>
                   <p>
-                    In addition to visibility and access, AfriJour fosters
-                    collaboration and networking opportunities within the
-                    academic community. Our innovative indexing system and
-                    rigorous peer review process create an environment where
-                    quality research is highlighted and scholarly dialogue is
-                    encouraged.
+                  {translation.about2.description2}
                   </p>
                   <div className="mt-[50px]">
                     <Link
@@ -406,7 +388,7 @@ export default function Home() {
                       className="group relative z-10 inline-block"
                     >
                       <div className="btn is-large is-rounded is-violet">
-                        Explore More
+                      {translation.about2.cta}
                       </div>
                       <div className="is-rounded absolute inset-0 -z-10 translate-y-[5px] bg-ColorBlack transition-all duration-300 ease-linear group-hover:translate-y-0" />
                     </Link>
@@ -460,7 +442,7 @@ export default function Home() {
                   {/* Section Content Block */}
                   <div className="mx-auto max-w-[636px]">
                     <h2 className="text-center font-DmSans -tracking-[1px]">
-                      Here are numerous topics that will enhance your research
+                     {translation.blog.title}
                     </h2>
                   </div>
                   {/* Section Content Block */}
@@ -965,15 +947,13 @@ export default function Home() {
                     {/* Section Content Block */}
                     <div>
                       <h2 className="font-DmSans -tracking-[1px]">
-                        Browse our journals that are just right for you
+                        {translation.blog.subtitle}
                       </h2>
                     </div>
                     {/* Section Content Block */}
                     {/* Section Text */}
                     <p>
-                      Choose from over 20,700 journals and learning paths, with
-                      dozens added every week. Top it off with courses that
-                      round out your skills and enrich your day-to-day.
+                   {translation.blog.description}
                     </p>
                     {/* Section Text */}
                   </div>
@@ -1168,19 +1148,14 @@ export default function Home() {
                     {/* Section Block */}
                     <div className="mb-5">
                       <h2 className="font-DmSans -tracking-[1px]">
-                        Share your knowledge &amp; experience with others
+                       {translation.testimonials.title}
                       </h2>
                     </div>
                     {/* Section Block */}
                   </div>
                   {/* Section Wrapper */}
                   <p>
-                    We envision AfriJour as the premier gateway to African
-                    journals, fostering a vibrant ecosystem of scholarly
-                    exchange and discovery. We aspire to be a catalyst for the
-                    global recognition and appreciation of African scholarship,
-                    inspiring and empowering the next generation of African
-                    scholars and thought leaders.
+                  {translation.testimonials.description}
                   </p>
                   <ul className="flex flex-col gap-5 font-semibold text-ColorBlack">
                     <li>
@@ -1208,7 +1183,7 @@ export default function Home() {
                       className="group relative z-10 inline-block"
                     >
                       <div className="btn is-large is-rounded is-violet">
-                        Go to Dashboard
+                        {translation.journals.cta}
                       </div>
                       <div className="is-rounded absolute inset-0 -z-10 translate-y-[5px] bg-ColorBlack transition-all duration-300 ease-linear group-hover:translate-y-0" />
                     </Link>
@@ -1260,8 +1235,7 @@ export default function Home() {
                 {/* Section Content Block */}
                 <div className="mx-auto max-w-[670px]">
                   <h2 className="text-center font-DmSans -tracking-[1px]">
-                    Researchers like you achieve their goals through our
-                    journals
+                    {translation.testimonials.title2}
                   </h2>
                 </div>
                 {/* Section Content Block */}
@@ -1371,16 +1345,14 @@ export default function Home() {
                         {/* Section Block */}
                         <div className="mb-5">
                           <h2 className="font-DmSans -tracking-[1px]">
-                            Frequently asked questions about our Afrijour
+                        {translation.faq.title}
                           </h2>
                         </div>
                         {/* Section Block */}
                       </div>
                       {/* Section Wrapper */}
                       <p>
-                        We encourage our students , researchers, Professors to
-                        ask us any questions regarding our journals. Our skilled
-                        mentors are ready to answer all your questions 24/7.
+                       {translation.faq.description}
                       </p>
                     </div>
                     {/* Content Block */}
@@ -1541,12 +1513,10 @@ export default function Home() {
                   data-jos_counter={1}
                 >
                   <h2 className="mb-5 font-DmSans -tracking-[1px]">
-                    Start learning today and expand your knowledge at any level
+                   {translation.map.title}
                   </h2>
                   <p className="mb-[50px]">
-                    We have easily downloadable learning app on any device and
-                    anywhere to experience an exclusive e-learning platform for
-                    world-class education.
+                  {translation.map.description}
                   </p>
                 </div>
                 <div className="mb-40">
@@ -1817,7 +1787,7 @@ export default function Home() {
               {/* Section Container */}
               <div className="container-default">
                 <div className="text-center">
-                  © Copyright 2024, All Rights Reserved
+                 {translation.footer.copyright}
                 </div>
               </div>
               {/* Section Container */}

@@ -6,7 +6,7 @@ import {
   Sphere,
   Graticule,
 } from "react-simple-maps";
-import { Tooltip, TooltipProvider } from "@/components/ui/tooltip";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 type JournalData = {
   [countryCode: string]: {
@@ -22,53 +22,30 @@ type CountryInfo = {
 };
 
 const geoUrl =
-  "https://raw.githubusercontent.com/datasets/geo-boundaries-world-110m/master/countries.geojson";
+  "https://raw.githubusercontent.com/codeforgermany/click_that_hood/main/public/data/africa.geojson";
 
 const journalData: JournalData = {
-  // Europe
-  GBR: { journalCount: 500, topJournal: "Nature" },
-  DEU: { journalCount: 450, topJournal: "Angewandte Chemie" },
-  FRA: { journalCount: 400, topJournal: "Comptes Rendus Mathématique" },
-  ITA: { journalCount: 350, topJournal: "Il Nuovo Cimento" },
-  ESP: { journalCount: 300, topJournal: "Revista Española de Cardiología" },
-  NLD: { journalCount: 250, topJournal: "Brain" },
-  CHE: { journalCount: 200, topJournal: "Helvetica Chimica Acta" },
-  SWE: { journalCount: 180, topJournal: "Acta Radiologica" },
-  POL: { journalCount: 150, topJournal: "Acta Poloniae Pharmaceutica" },
-  BEL: { journalCount: 140, topJournal: "Acta Clinica Belgica" },
-
+  
   // Africa
   ZAF: { journalCount: 100, topJournal: "South African Medical Journal" },
-  EGY: { journalCount: 80, topJournal: "Egyptian Journal of Chemistry" },
-  NGA: { journalCount: 70, topJournal: "African Journal of Biotechnology" },
-  KEN: { journalCount: 60, topJournal: "East African Medical Journal" },
-  MAR: { journalCount: 50, topJournal: "Moroccan Journal of Chemistry" },
-  TUN: { journalCount: 45, topJournal: "Tunisian Journal of Plant Protection" },
-  GHA: { journalCount: 40, topJournal: "Ghana Medical Journal" },
-  UGA: { journalCount: 35, topJournal: "African Health Sciences" },
-  ETH: { journalCount: 30, topJournal: "Ethiopian Journal of Health Sciences" },
-  TZA: { journalCount: 25, topJournal: "Tanzania Journal of Health Research" },
+  14: { journalCount: 80, topJournal: "Egyptian Journal of Chemistry" },
+  39: { journalCount: 70, topJournal: "African Journal of Biotechnology" },
+  26: { journalCount: 60, topJournal: "East African Medical Journal" },
+  30: { journalCount: 50, topJournal: "Moroccan Journal of Chemistry" },
+  56: { journalCount: 45, topJournal: "Tunisian Journal of Plant Protection" },
+  20: { journalCount: 40, topJournal: "Ghana Medical Journal" },
+  57: { journalCount: 35, topJournal: "African Health Sciences" },
+  17: { journalCount: 30, topJournal: "Ethiopian Journal of Health Sciences" },
+  54: { journalCount: 25, topJournal: "Tanzania Journal of Health Research" },
 
-  // Other continents
-  USA: { journalCount: 1000, topJournal: "Science" },
-  CAN: {
-    journalCount: 400,
-    topJournal: "Canadian Medical Association Journal",
-  },
-  JPN: { journalCount: 450, topJournal: "Chemical & Pharmaceutical Bulletin" },
-  CHN: { journalCount: 600, topJournal: "Chinese Science Bulletin" },
-  AUS: { journalCount: 300, topJournal: "Medical Journal of Australia" },
-  BRA: {
-    journalCount: 250,
-    topJournal: "Brazilian Journal of Medical and Biological Research",
-  },
-  IND: { journalCount: 350, topJournal: "Current Science" },
+
 };
 
 const WorldMap: React.FC = () => {
   const [tooltipContent, setTooltipContent] = useState<CountryInfo | null>(
     null
   );
+  
   const [dimensions, setDimensions] = useState({ width: 800, height: 450 });
   const wrapperRef = useRef<HTMLDivElement>(null);
 
@@ -92,13 +69,16 @@ const WorldMap: React.FC = () => {
 
   const handleMouseEnter = (geo: any) => {
     const propGeo = geo.properties;
-    const countryData = journalData[propGeo.iso_a3];
+    const countryData = journalData[propGeo.cartodb_id];
+    // console.log(countryData);
     if (countryData) {
       setTooltipContent({
         countryName: propGeo.name,
         journalCount: countryData.journalCount,
         topJournal: countryData.topJournal,
       });
+     
+    
     }
   };
 
@@ -110,13 +90,14 @@ const WorldMap: React.FC = () => {
     <div ref={wrapperRef} className="w-full mx-auto p-4">
       <div
         className="relative"
-        style={{ width: "100%", height: `${dimensions.height}px` }}
+        style={{ width: "100%", height: `400px` }}
       >
         <ComposableMap
           projectionConfig={{
-            rotate: [0, 0, 0],
-            scale: 180,
+            rotate: [-10, 0, 0],  // Center on Africa (rotate longitude a bit for better alignment)
+            scale: 280, 
           }}
+             height={400}  
         >
           {/* <ZoomableGroup center={[0, 20]} zoom={1}> */}
           <Sphere
@@ -132,7 +113,7 @@ const WorldMap: React.FC = () => {
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
-                  onMouseEnter={() => handleMouseEnter(geo)}
+                      onMouseEnter={() => handleMouseEnter(geo)}
                   onMouseLeave={handleMouseLeave}
                   style={{
                     default: { fill: "#f1dccd" },
@@ -147,12 +128,22 @@ const WorldMap: React.FC = () => {
         </ComposableMap>
         {tooltipContent && (
           <TooltipProvider>
-            <Tooltip>
-              <div className="p-2">
+            <Tooltip open={true}>
+              <TooltipTrigger asChild>
+              <div style={{ 
+                position: 'absolute', 
+                left: '50%', 
+                top: '50%',
+                transform: 'translate(-50%, -50%)',
+                width: '1px',
+                height: '1px'
+              }} />
+              </TooltipTrigger>
+              <TooltipContent side="top" className="z-50 p-4 rounded rounded-xl shadow-xl">
                 <h3 className="font-bold">{tooltipContent.countryName}</h3>
                 <p>Number of Journals: {tooltipContent.journalCount}</p>
                 <p>Top Journal: {tooltipContent.topJournal}</p>
-              </div>
+              </TooltipContent>
             </Tooltip>
           </TooltipProvider>
         )}

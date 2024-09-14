@@ -1,10 +1,24 @@
 "use client";
+import { languages } from "@/data/content";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { useEffect } from "react";
-const Navbar = () => {
+
+interface NavbarProps {
+  setSelectedLanguage: (languageCode: string) => void;
+  selectedLanguage: string;
+}
+
+const Navbar =  ({ setSelectedLanguage, selectedLanguage }: NavbarProps) => {
   const [isActive, setIsActive] = useState(false);
+
+
+  const handleLanguageChange = (languageCode: string) => {
+    setSelectedLanguage(languageCode);
+    // Additional logic if needed
+  };
+
   const handleMenuClick = () => {
     setIsActive(!isActive);
   };
@@ -222,6 +236,17 @@ const Navbar = () => {
               >
                 Login
               </Link> */}
+                <select
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        value={selectedLanguage}
+        onChange={(e) => handleLanguageChange(e.target.value)}
+      >
+        {languages.map((language) => (
+          <option key={language.code} value={language.code}>
+            {language.name}
+          </option>
+        ))}
+      </select>
               <Link
                 className="group relative hidden sm:inline-block"
                 href="https://afrijour-dashboard.vercel.app/"
@@ -229,6 +254,7 @@ const Navbar = () => {
                 <div className="btn is-rounded is-violet">Dashboard</div>
                 <div className="is-rounded absolute inset-0 -z-10 translate-y-[5px] bg-ColorBlack transition-all duration-300 ease-linear group-hover:translate-y-0" />
               </Link>
+            
               {/* Responsive Offcanvas Menu Button */}
               <div className="block lg:hidden">
                 <button

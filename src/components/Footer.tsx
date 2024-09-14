@@ -2,8 +2,14 @@
 
 import Image from "next/image";
 import React from "react";
+import { Translation} from "@/data/content";
 
-const Footer = () => {
+
+interface FooterProps {
+  translation: Translation;
+}
+
+const Footer = ({translation }: FooterProps) => {
   return (
     <>
       {" "}
@@ -289,7 +295,7 @@ const Footer = () => {
               {/* Section Container */}
               <div className="container-default">
                 <div className="text-center">
-                  © Copyright 2024, All Rights Reserved
+                 {translation.footer.copyright}
                 </div>
               </div>
               {/* Section Container */}
