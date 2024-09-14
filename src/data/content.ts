@@ -70,6 +70,7 @@
     footer: {
       copyright: string;
       contact: string;
+      description: string;
       primaryPages: string[];
       utilityPages: string[];
       resources: string[];
@@ -159,6 +160,7 @@ export const translations: { [key: string]: Translation }  =
       },
       footer: {
         copyright: "© Copyright 2024, All Rights Reserved",
+        description: "Spotlight and elevate African journals. We aim to foster a global appreciation for the intellectual richness and diversity that Africa has to offer.",
         contact: "info@afrijour.com",
         primaryPages: [
           "Home",
@@ -262,6 +264,7 @@ export const translations: { [key: string]: Translation }  =
       footer: {
         copyright: "© Derechos de autor 2024, todos los derechos reservados",
         contact: "info@afrijour.com",
+        description:"Destacar y elevar las revistas africanas. Nuestro objetivo es fomentar una apreciación global de la riqueza intelectual y la diversidad que África tiene para ofrecer.",
         primaryPages: [
           "Inicio",
           "Acerca de nosotros",
@@ -364,6 +367,7 @@ export const translations: { [key: string]: Translation }  =
       footer: {
         copyright: "© Droits d'auteur 2024, tous droits réservés",
         contact: "info@afrijour.com",
+        description:"Mettre en valeur et élever les revues africaines. Nous visons à favoriser une appréciation mondiale de la richesse intellectuelle et de la diversité que l'Afrique a à offrir.",
         primaryPages: [
           "Accueil",
           "À propos de nous",

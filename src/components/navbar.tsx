@@ -1,6 +1,5 @@
 "use client";
-import { languages } from "@/data/content";
-import Image from "next/image";
+import { languages, Translation } from "@/data/content";
 import Link from "next/link";
 import React, { useState } from "react";
 import { useEffect } from "react";
@@ -8,9 +7,10 @@ import { useEffect } from "react";
 interface NavbarProps {
   setSelectedLanguage: (languageCode: string) => void;
   selectedLanguage: string;
+  translation: Translation;
 }
 
-const Navbar =  ({ setSelectedLanguage, selectedLanguage }: NavbarProps) => {
+const Navbar =  ({ setSelectedLanguage, selectedLanguage, translation }: NavbarProps) => {
   const [isActive, setIsActive] = useState(false);
 
 
@@ -196,32 +196,32 @@ const Navbar =  ({ setSelectedLanguage, selectedLanguage }: NavbarProps) => {
                 <ul className="site-menu-main">
                   <li className="nav-item">
                     <Link className="nav-link-item" href="/">
-                      Home
+                      {translation.navigation.home}
                     </Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link-item" href="#features">
-                      Features
+                      {translation.navigation.features}
                     </Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link-item" href="#about">
-                      About
+                      {translation.navigation.about}
                     </Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link-item" href="#journals">
-                      Journals
+                      {translation.navigation.journals}
                     </Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link-item" href="#testimonials">
-                      Testimonials
+                      {translation.navigation.testimonials}
                     </Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link-item" href="#faq">
-                      FAQ
+                      {translation.navigation.faq}
                     </Link>
                   </li>
                 </ul>

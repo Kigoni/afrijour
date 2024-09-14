@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <div className="page-wrapper relative z-[1] bg-white">
       {/*...::: Header Start :::... */}
-      <Navbar setSelectedLanguage={handleLanguageChange}  selectedLanguage={selectedLanguage}/>
+      <Navbar setSelectedLanguage={handleLanguageChange} translation={translation}  selectedLanguage={selectedLanguage}/>
       {/*...::: Header End :::... */}
       <main className="main-wrapper relative overflow-hidden">
         {/*...::: Hero Section Start :::... */}
@@ -1560,9 +1560,7 @@ export default function Home() {
                     <div>
                       {/* Footer About Text */}
                       <div className="lg:max-w-[416px]">
-                        Spotlight and elevate African journals. We aim to foster
-                        a global appreciation for the intellectual richness and
-                        diversity that Africa has to offer.
+                        {translation.footer.description}
                       </div>
                       {/* Footer Mail */}
                       <Link
@@ -1618,7 +1616,7 @@ export default function Home() {
                   <div className="flex flex-col gap-y-7 md:col-span-1 lg:col-span-1">
                     {/* Footer Widget Title */}
                     <div className="text-xl font-semibold capitalize">
-                      Primary Pages
+                      Pages
                     </div>
                     {/* Footer Navbar */}
                     <ul className="flex flex-col gap-y-[10px] capitalize">
@@ -1627,7 +1625,7 @@ export default function Home() {
                           className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/"
                         >
-                          Home
+                          {translation.navigation.home}
                         </Link>
                       </li>
                       <li>
@@ -1635,31 +1633,31 @@ export default function Home() {
                           className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/about#"
                         >
-                          About Us
+                          {translation.navigation.about}
                         </Link>
                       </li>
                       <li>
                         <Link
                           className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
-                          href="/services#"
+                          href="/features#"
                         >
-                          Services
+                          {translation.navigation.features}
                         </Link>
                       </li>
                       <li>
                         <Link
                           className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
-                          href="/pricing#"
+                          href="/journals#"
                         >
-                          pricing
+                          {translation.navigation.journals}
                         </Link>
                       </li>
                       <li>
                         <Link
                           className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
-                          href="/contact#"
+                          href="/faq#"
                         >
-                          Contact
+                          {translation.navigation.faq}
                         </Link>
                       </li>
                     </ul>
