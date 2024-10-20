@@ -67,6 +67,22 @@ body {
   /* 1 */
   line-height: inherit;
   /* 2 */
+  /* Add the aurora background animation here */
+  background: linear-gradient(90deg, #D35400, #E67E22, #2ECC71, #3498DB);
+  background-size: 400% 400%;
+  animation: aurora 10s ease infinite;
+}
+
+@keyframes aurora {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /*
