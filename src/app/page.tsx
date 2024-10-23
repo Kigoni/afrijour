@@ -14,6 +14,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
 import WorldMap from "@/components/WorldMap";
+import { Toaster } from "react-hot-toast";
+import Chatbot from "../components/Chatbot";
 import { Language, translations } from "@/data/content";
 
 
@@ -56,6 +58,7 @@ export default function Home() {
         {/*...::: Hero Section Start :::... */}
         <section className="section-hero">
           <div className="relative z-10">
+            <div className="bg-[#FFD372]">
             {/* Hero Space */}
             <div className="pb-20 pt-[100px] md:pt-[120px] lg:pb-[110px] lg:pt-[190px]">
               {/* Section Container */}
@@ -74,7 +77,7 @@ export default function Home() {
                       href="https://afrijour-dashboard.vercel.app/"
                       className="group relative inline-block"
                     >
-                      <div className="btn is-large is-rounded is-violet">
+                      <div className="btn is-large is-rounded is-lunar-green">
                         {translation.hero.cta}
                       </div>
                       <div className="is-rounded absolute inset-0 -z-10 translate-y-[5px] bg-ColorBlack transition-all duration-300 ease-linear group-hover:translate-y-0" />
@@ -112,6 +115,7 @@ export default function Home() {
               </div>
               {/* Section Container */}
             </div>
+            </div>
             {/* Hero Space */}
             {/* Hero Background Shape */}
             <Image
@@ -122,14 +126,14 @@ export default function Home() {
               className="absolute right-0 top-0 -z-10"
             />
             {/* Background Divider Shape */}
-            <div className="min-h-[65px] w-full bg-[url('/assets/img/elements/home-4-divider-shape-1.svg')] bg-contain bg-[center_bottom] bg-repeat-x" />
+            {/* <div className="min-h-[65px] w-full bg-[url('/assets/img/elements/home-4-divider-shape-1.svg')] bg-contain bg-[center_bottom] bg-repeat-x" /> */}
           </div>
         </section>
         {/*...::: Hero Section End :::... */}
         {/*...::: Features Section Start :::... */}
         <section className="section-features" id="features">
           {/* Section Background */}
-          <div className="relative z-10 bg-[#F5EFEB]">
+          <div className="relative z-10 bg-[#324438] text-white">
             {/* Section Space */}
             <div className="section-space">
               {/* Section Container */}
@@ -146,7 +150,7 @@ export default function Home() {
                 >
                   {/* Section Content Block */}
                   <div className="mx-auto max-w-[636px]">
-                    <h2 className="text-center font-DmSans -tracking-[1px]">
+                    <h2 className="text-center text-yellow-400 font-DmSans -tracking-[1px]">
                       {translation.features.title}
                     </h2>
                   </div>
@@ -165,7 +169,7 @@ export default function Home() {
                     data-jos_duration="0.7"
                     data-jos_counter={1}
                   >
-                    <div className="h-full rounded-[10px] border-2 border-ColorBlack p-[30px] transition-all duration-300 hover:-rotate-3 hover:bg-white">
+                    <div className="h-full rounded-[10px] border-2 border-ColorBlack p-[30px] transition-all duration-300 hover:-rotate-3 hover:bg-yellow-500">
                       <Image
                         src="assets/img/icons/icon-violet-feature-1.svg"
                         alt="icon-violet-feature-1"
@@ -173,7 +177,7 @@ export default function Home() {
                         height={69}
                         className="mb-[30px] h-[70px] w-auto"
                       />
-                      <div className="mb-4 text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
+                      <div className="mb-4 text-white text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
                         {translation.features.items[0].title}
                       </div>
                       <p className="line-clamp-3">
@@ -192,7 +196,7 @@ export default function Home() {
                     data-jos_duration="0.7"
                     data-jos_counter={1}
                   >
-                    <div className="h-full rounded-[10px] border-2 border-ColorBlack p-[30px] transition-all duration-300 hover:-rotate-3 hover:bg-white">
+                    <div className="h-full rounded-[10px] border-2 border-ColorBlack p-[30px] transition-all duration-300 hover:-rotate-3 hover:bg-yellow-500">
                       <Image
                         src="assets/img/icons/icon-violet-feature-2.svg"
                         alt="icon-violet-feature-2"
@@ -200,7 +204,7 @@ export default function Home() {
                         height={69}
                         className="mb-[30px] h-[70px] w-auto"
                       />
-                      <div className="mb-4 text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
+                      <div className="mb-4 text-white text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
                       {translation.features.items[1].title}
                       </div>
                       <p className="line-clamp-3">
@@ -219,7 +223,7 @@ export default function Home() {
                     data-jos_duration="0.7"
                     data-jos_counter={1}
                   >
-                    <div className="h-full rounded-[10px] border-2 border-ColorBlack p-[30px] transition-all duration-300 hover:-rotate-3 hover:bg-white">
+                    <div className="h-full rounded-[10px] border-2 border-ColorBlack p-[30px] transition-all duration-300 hover:-rotate-3 hover:bg-yellow-500">
                       <Image
                         src="assets/img/icons/icon-violet-feature-3.svg"
                         alt="icon-violet-feature-3"
@@ -227,7 +231,7 @@ export default function Home() {
                         height={69}
                         className="mb-[30px] h-[70px] w-auto"
                       />
-                      <div className="mb-4 text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
+                      <div className="mb-4 text-white text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
                       {translation.features.items[2].title}
                       </div>
                       <p className="line-clamp-3">
@@ -246,7 +250,7 @@ export default function Home() {
                     data-jos_duration="0.7"
                     data-jos_counter={1}
                   >
-                    <div className="h-full rounded-[10px] border-2 border-ColorBlack p-[30px] transition-all duration-300 hover:-rotate-3 hover:bg-white">
+                    <div className="h-full rounded-[10px] border-2 border-ColorBlack p-[30px] transition-all duration-300 hover:-rotate-3 hover:bg-yellow-500">
                       <Image
                         src="assets/img/icons/icon-violet-feature-4.svg"
                         alt="icon-violet-feature-4"
@@ -254,7 +258,7 @@ export default function Home() {
                         height={69}
                         className="mb-[30px] h-[70px] w-auto"
                       />
-                      <div className="mb-4 text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
+                      <div className="mb-4 text-white text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
                       {translation.features.items[3].title}
                       </div>
                       <p className="line-clamp-3">
@@ -323,7 +327,7 @@ export default function Home() {
                       href="https://afrijour-dashboard.vercel.app/"
                       className="group relative z-10 inline-block"
                     >
-                      <div className="btn is-large is-rounded is-violet">
+                      <div className="btn is-large is-rounded is-lunar-green">
                        {translation.about.cta}
                       </div>
                       <div className="is-rounded absolute inset-0 -z-10 translate-y-[5px] bg-ColorBlack transition-all duration-300 ease-linear group-hover:translate-y-0" />
@@ -387,7 +391,7 @@ export default function Home() {
                       href="https://afrijour-dashboard.vercel.app/analytics"
                       className="group relative z-10 inline-block"
                     >
-                      <div className="btn is-large is-rounded is-violet">
+                      <div className="btn is-large is-rounded is-lunar-green">
                       {translation.about2.cta}
                       </div>
                       <div className="is-rounded absolute inset-0 -z-10 translate-y-[5px] bg-ColorBlack transition-all duration-300 ease-linear group-hover:translate-y-0" />
@@ -419,14 +423,16 @@ export default function Home() {
             </div>
             {/* Section Container */}
           </div>
+          <div className="min-h-[65px] w-full rotate-180  bg-[url('/assets/img/elements/home-4-divider-shape-4.svg')] bg-contain bg-[center_bottom] bg-repeat-x -mb-1" />
           {/* Section Space */}
         </section>
         {/*...::: Content Section End :::... */}
         {/*...::: Ticket Slider Section Start :::... */}
-        <div className="section-topic">
+        <div className="section-topic bg-[#FFD372] pt-10">
+       
           <div className="relative">
             {/* Section Space */}
-            <div className="section-space-bottom">
+            <div className="section-space-bottom2">
               {/* Section Container */}
               <div className="container-default">
                 {/* Section Content Wrapper */}
@@ -923,15 +929,17 @@ export default function Home() {
             </div>
             {/* Section Space */}
           </div>
+          
         </div>
         {/*...::: Ticket Slider Section End :::... */}
         {/*...::: Course Section Start :::... */}
         <section className="course-section" id="journals">
           <div className="relative">
             {/* Section Background */}
-            <div className="bg-[#F5EFEB]">
+            <div className="bg-[#FFD372]">
+              <div className="min-h-[65px] w-full bg-[url('/assets/img/elements/home-4-divider-shape-4.svg')] bg-contain bg-[center_bottom] bg-repeat-x" />
               {/* Section Space */}
-              <div className="section-space">
+              <div className="section-space " style={{ paddingTop: "0px" }}>
                 {/* Section Container */}
                 <div className="container-default">
                   {/* Section Content Wrapper */}
@@ -1004,7 +1012,7 @@ export default function Home() {
                         >
                           African Computer and Information Technology
                         </Link>
-                        <button className="btn is-large is-rounded mt-auto border-2 border-b-[5px] border-ColorBlack bg-[#F5EFEB] text-ColorBlack hover:bg-ColorViolet hover:text-white">
+                        <button className="btn is-large is-rounded mt-auto border-2 border-b-[5px] border-ColorBlack bg-[#ffd372] text-ColorBlack hover:bg-ColorViolet hover:text-white">
                           View Journal
                         </button>
                       </div>
@@ -1054,7 +1062,7 @@ export default function Home() {
                         >
                           Social Sciences and Humanities
                         </Link>
-                        <button className="btn is-large is-rounded mt-auto border-2 border-b-[5px] border-ColorBlack bg-[#F5EFEB] text-ColorBlack hover:bg-ColorViolet hover:text-white">
+                        <button className="btn is-large is-rounded mt-auto border-2 border-b-[5px] border-ColorBlack bg-[#ffd372] text-ColorBlack hover:bg-ColorViolet hover:text-white">
                           View Journal
                         </button>
                       </div>
@@ -1104,7 +1112,7 @@ export default function Home() {
                         >
                           Journal of Medicine and Health Sciences
                         </Link>
-                        <button className="btn is-large is-rounded mt-auto border-2 border-b-[5px] border-ColorBlack bg-[#F5EFEB] text-ColorBlack hover:bg-ColorViolet hover:text-white">
+                        <button className="btn is-large is-rounded mt-auto border-2 border-b-[5px] border-ColorBlack bg-[#ffd372] text-ColorBlack hover:bg-ColorViolet hover:text-white">
                           View Journal
                         </button>
                       </div>
@@ -1117,10 +1125,7 @@ export default function Home() {
               </div>
               {/* Section Space */}
             </div>
-            {/* Background Divider Shape */}
-            <div className="absolute top-0 min-h-[65px] w-full bg-[url('/assets/img/elements/home-4-divider-shape-3.svg')] bg-contain bg-[center_top] bg-repeat-x" />
-            {/* Background Divider Shape */}
-            <div className="-mt-px min-h-[65px] w-full bg-[url('/assets/img/elements/home-4-divider-shape-4.svg')] bg-contain bg-[center_top] bg-repeat-x" />
+            
             {/* Section Background */}
           </div>
         </section>
@@ -1182,7 +1187,7 @@ export default function Home() {
                       href="https://afrijour-dashboard.vercel.app/"
                       className="group relative z-10 inline-block"
                     >
-                      <div className="btn is-large is-rounded is-violet">
+                      <div className="btn is-large is-rounded is-lunar-green">
                         {translation.journals.cta}
                       </div>
                       <div className="is-rounded absolute inset-0 -z-10 translate-y-[5px] bg-ColorBlack transition-all duration-300 ease-linear group-hover:translate-y-0" />
@@ -1218,7 +1223,7 @@ export default function Home() {
         </section>
         {/*...::: Content Section End :::... */}
         {/*...::: Testimonial Section Start :::... */}
-        <section className="section-testimonial" id="testimonials">
+        <section className="section-testimonial bg-[#324438] text-white pt-20" id="testimonials">
           <div className="relative">
             {/* Section Container */}
             <div className="container-default">
@@ -1234,7 +1239,7 @@ export default function Home() {
               >
                 {/* Section Content Block */}
                 <div className="mx-auto max-w-[670px]">
-                  <h2 className="text-center font-DmSans -tracking-[1px]">
+                  <h2 className="text-center font-DmSans text-yellow-500 -tracking-[1px]">
                     {translation.testimonials.title2}
                   </h2>
                 </div>
@@ -1250,7 +1255,7 @@ export default function Home() {
                       <Star fill="orange" strokeWidth={0} className="size-8" />
                       <Star fill="orange" strokeWidth={0} className="size-8" />
                     </div>
-                    <p className="mb-0 text-ColorBlack">
+                    <p className="mb-0">
                       &quot;The online jornals were truly a lifesaver. Without
                       their expertise and kind help I could not have achieved
                       the best results in my class. I followed what they said
@@ -1283,7 +1288,7 @@ export default function Home() {
                       <Star fill="orange" strokeWidth={0} className="size-8" />
                       <Star fill="orange" strokeWidth={0} className="size-8" />
                     </div>
-                    <p className="mb-0 text-ColorBlack">
+                    <p className="mb-0 ">
                       &quot;I actually wanted to learn more than what was
                       taught. I knew I couldn&apos;t be a student, but I wanted
                       to at least understand some of the basics. Then I bought
@@ -1323,7 +1328,7 @@ export default function Home() {
         <section className="section-FAQ" id="faq">
           <div className="realative">
             {/* Section Background */}
-            <div className="bg-[#F5EFEB]">
+            <div className="bg-[#ffd372]">
               {/* Section Space */}
               <div className="section-space">
                 {/* Section Container */}
@@ -1490,8 +1495,7 @@ export default function Home() {
               {/* Section Space */}
             </div>
             {/* Section Background */}
-            {/* Background Divider Shape */}
-            <div className="min-h-[65px] w-full rotate-180 bg-[url('/assets/img/elements/home-4-divider-shape-1.svg')] bg-contain bg-[center_bottom] bg-repeat-x" />
+         
           </div>
         </section>
         {/*...::: FAQ Section End :::... */}
@@ -1519,7 +1523,7 @@ export default function Home() {
                   {translation.map.description}
                   </p>
                 </div>
-                <div className="mb-40">
+                <div className="mb-80 mt-20">
                   <WorldMap />
                 </div>
                 {/* Newsletter Area */}
@@ -1532,10 +1536,18 @@ export default function Home() {
           </div>
         </section>
         {/*...::: Newsletter Section End :::... */}
+        <Chatbot
+        title="Afrijour Assistant"
+        subtitle="Online"
+        botName="Afrijour"
+        welcomeMessage="Hi, I'm Afrijour Chatbot. How can I help you today?"
+      />
+      <Toaster />
       </main>
+       
       {/*...::: Footer Section Start :::... */}
       <footer className="section-footer">
-        <div className="bg-[#F5EFEB]">
+        <div className="bg-[#324438] text-white">
           {/* Footer Area Center */}
           <div className="text-ColorBlack">
             {/* Footer Center Spacing */}
@@ -1555,9 +1567,9 @@ export default function Home() {
                         height={24}
                       />
                     </Link> */}
-                    <h1 className="text-5xl">AfriJour</h1>
+                    <h1 className="text-5xl text-yellow-500">AfriJour</h1>
                     {/* Footer Content */}
-                    <div>
+                    <div className="text-yellow-100">
                       {/* Footer About Text */}
                       <div className="lg:max-w-[416px]">
                         {translation.footer.description}
@@ -1613,16 +1625,16 @@ export default function Home() {
                   </div>
                   {/* Footer Widget Item */}
                   {/* Footer Widget Item */}
-                  <div className="flex flex-col gap-y-7 md:col-span-1 lg:col-span-1">
+                  <div className="flex flex-col gap-y-7 md:col-span-1 lg:col-span-1 ">
                     {/* Footer Widget Title */}
-                    <div className="text-xl font-semibold capitalize">
+                    <div className="text-xl font-semibold capitalize text-yellow-500">
                       Pages
                     </div>
                     {/* Footer Navbar */}
                     <ul className="flex flex-col gap-y-[10px] capitalize">
                       <li>
                         <Link
-                          className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/"
                         >
                           {translation.navigation.home}
@@ -1630,7 +1642,7 @@ export default function Home() {
                       </li>
                       <li>
                         <Link
-                          className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/about#"
                         >
                           {translation.navigation.about}
@@ -1638,7 +1650,7 @@ export default function Home() {
                       </li>
                       <li>
                         <Link
-                          className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/features#"
                         >
                           {translation.navigation.features}
@@ -1646,7 +1658,7 @@ export default function Home() {
                       </li>
                       <li>
                         <Link
-                          className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/journals#"
                         >
                           {translation.navigation.journals}
@@ -1654,7 +1666,7 @@ export default function Home() {
                       </li>
                       <li>
                         <Link
-                          className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/faq#"
                         >
                           {translation.navigation.faq}
@@ -1666,7 +1678,7 @@ export default function Home() {
                   {/* Footer Widget Item */}
                   <div className="flex flex-col gap-y-6 md:col-span-1 lg:col-span-1">
                     {/* Footer Title */}
-                    <div className="text-xl font-semibold capitalize">
+                    <div className="text-xl font-semibold capitalize text-yellow-500">
                       Utility pages
                     </div>
                     {/* Footer Title */}
@@ -1674,7 +1686,7 @@ export default function Home() {
                     <ul className="flex flex-col gap-y-[10px] capitalize">
                       <li>
                         <Link
-                          className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/signup"
                         >
                           Signup
@@ -1682,7 +1694,7 @@ export default function Home() {
                       </li>
                       <li>
                         <Link
-                          className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/login"
                         >
                           Login
@@ -1690,7 +1702,7 @@ export default function Home() {
                       </li>
                       <li>
                         <Link
-                          className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/error-404"
                         >
                           404 Not found
@@ -1698,7 +1710,7 @@ export default function Home() {
                       </li>
                       <li>
                         <Link
-                          className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/reset-password"
                         >
                           Password Reset
@@ -1710,7 +1722,7 @@ export default function Home() {
                   {/* Footer Widget Item */}
                   <div className="flex flex-col gap-y-6 md:col-span-1 lg:col-span-1">
                     {/* Footer Title */}
-                    <div className="text-xl font-semibold capitalize">
+                    <div className="text-xl font-semibold capitalize text-yellow-500">
                       Resources
                     </div>
                     {/* Footer Title */}
@@ -1721,7 +1733,7 @@ export default function Home() {
                           href="https://www.example.com/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                         >
                           Support
                         </Link>
@@ -1731,7 +1743,7 @@ export default function Home() {
                           href="https://www.example.com/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                         >
                           Privacy policy
                         </Link>
@@ -1741,7 +1753,7 @@ export default function Home() {
                           href="https://www.example.com/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                         >
                           Terms &amp; Conditions
                         </Link>
@@ -1751,7 +1763,7 @@ export default function Home() {
                           href="https://www.example.com/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                         >
                           Strategic finance
                         </Link>
@@ -1761,7 +1773,7 @@ export default function Home() {
                           href="https://www.example.com/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:opcity-100 text-ColorBlack underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                         >
                           Video guide
                         </Link>

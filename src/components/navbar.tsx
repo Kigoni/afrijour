@@ -251,7 +251,7 @@ const Navbar =  ({ setSelectedLanguage, selectedLanguage, translation }: NavbarP
                 className="group relative hidden sm:inline-block"
                 href="https://afrijour-dashboard.vercel.app/"
               >
-                <div className="btn is-rounded is-violet">Dashboard</div>
+                <div className="btn is-rounded is-lunar-green">Dashboard</div>
                 <div className="is-rounded absolute inset-0 -z-10 translate-y-[5px] bg-ColorBlack transition-all duration-300 ease-linear group-hover:translate-y-0" />
               </Link>
             
