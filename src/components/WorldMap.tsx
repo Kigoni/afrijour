@@ -1,3 +1,4 @@
+import { Black_And_White_Picture } from "next/font/google";
 import React, { useEffect, useRef, useState } from "react";
 import {
   ComposableMap,
@@ -165,9 +166,9 @@ const WorldMap: React.FC = () => {
                         : geo.properties.name
                     }
                     style={{
-                      default: { fill: "#ffd372" },
-                      hover: { fill: "#324438" },
-                      pressed: { fill: "#4b2aad" },
+                      default: { fill: "#ffd372", stroke: "#888", strokeWidth: 0.75 },
+                      hover: { fill: "#ffd372", stroke: "#888", strokeWidth: 0.75 },
+                      pressed: { fill: "#ffd372", stroke: "#888", strokeWidth: 0.75 },
                     }}
                   />
                 );

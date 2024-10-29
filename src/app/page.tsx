@@ -50,7 +50,7 @@ export default function Home() {
     };
   }, []);
   return (
-    <div className="page-wrapper relative z-[1] bg-white">
+    <div className="page-wrapper relative z-[1] bg-white">  
       {/*...::: Header Start :::... */}
       <Navbar setSelectedLanguage={handleLanguageChange} translation={translation}  selectedLanguage={selectedLanguage}/>
       {/*...::: Header End :::... */}
@@ -58,7 +58,7 @@ export default function Home() {
         {/*...::: Hero Section Start :::... */}
         <section className="section-hero">
           <div className="relative z-10">
-            <div className="bg-[#FFD372]">
+            <div className="bg-[#ccd6e8]">
             {/* Hero Space */}
             <div className="pb-20 pt-[100px] md:pt-[120px] lg:pb-[110px] lg:pt-[190px]">
               {/* Section Container */}
@@ -74,10 +74,10 @@ export default function Home() {
                       {translation.hero.subtitle}
                     </p>
                     <Link
-                      href="https://afrijour-dashboard.vercel.app/"
+                      href="https://Afrika Journals-dashboard.vercel.app/"
                       className="group relative inline-block"
                     >
-                      <div className="btn is-large is-rounded is-lunar-green">
+                      <div className="btn is-large is-rounded bg-yellow-500 hover:bg-yellow-600">
                         {translation.hero.cta}
                       </div>
                       <div className="is-rounded absolute inset-0 -z-10 translate-y-[5px] bg-ColorBlack transition-all duration-300 ease-linear group-hover:translate-y-0" />
@@ -126,14 +126,14 @@ export default function Home() {
               className="absolute right-0 top-0 -z-10"
             />
             {/* Background Divider Shape */}
-            {/* <div className="min-h-[65px] w-full bg-[url('/assets/img/elements/home-4-divider-shape-1.svg')] bg-contain bg-[center_bottom] bg-repeat-x" /> */}
+            {/* <div className="min-h-[65px] w-full bg-[url('/assets/img/elements/home-4-divider-shape-1.svg')] bg-contain bg-[#e5e7eb]  bg-[center_bottom] bg-repeat-x" /> */}
           </div>
         </section>
         {/*...::: Hero Section End :::... */}
         {/*...::: Features Section Start :::... */}
         <section className="section-features" id="features">
           {/* Section Background */}
-          <div className="relative z-10 bg-[#324438] text-white">
+          <div className="relative z-10 bg-[#e5e7eb]  text-black">
             {/* Section Space */}
             <div className="section-space">
               {/* Section Container */}
@@ -150,7 +150,7 @@ export default function Home() {
                 >
                   {/* Section Content Block */}
                   <div className="mx-auto max-w-[636px]">
-                    <h2 className="text-center text-yellow-400 font-DmSans -tracking-[1px]">
+                    <h2 className="text-center text-yellow-600 font-DmSans -tracking-[1px]">
                       {translation.features.title}
                     </h2>
                   </div>
@@ -169,7 +169,7 @@ export default function Home() {
                     data-jos_duration="0.7"
                     data-jos_counter={1}
                   >
-                    <div className="h-full rounded-[10px] border-2 border-ColorBlack p-[30px] transition-all duration-300 hover:-rotate-3 hover:bg-yellow-500">
+                    <div className="h-full rounded-[10px] border-2 border-ColorBlack p-[30px] text-black  transition-all duration-300 hover:-rotate-3 hover:bg-yellow-500">
                       <Image
                         src="assets/img/icons/icon-violet-feature-1.svg"
                         alt="icon-violet-feature-1"
@@ -177,7 +177,7 @@ export default function Home() {
                         height={69}
                         className="mb-[30px] h-[70px] w-auto"
                       />
-                      <div className="mb-4 text-white text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
+                      <div className="mb-4 text-black text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
                         {translation.features.items[0].title}
                       </div>
                       <p className="line-clamp-3">
@@ -204,7 +204,7 @@ export default function Home() {
                         height={69}
                         className="mb-[30px] h-[70px] w-auto"
                       />
-                      <div className="mb-4 text-white text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
+                      <div className="mb-4 text-black text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
                       {translation.features.items[1].title}
                       </div>
                       <p className="line-clamp-3">
@@ -231,7 +231,7 @@ export default function Home() {
                         height={69}
                         className="mb-[30px] h-[70px] w-auto"
                       />
-                      <div className="mb-4 text-white text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
+                      <div className="mb-4 text-black text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
                       {translation.features.items[2].title}
                       </div>
                       <p className="line-clamp-3">
@@ -258,7 +258,7 @@ export default function Home() {
                         height={69}
                         className="mb-[30px] h-[70px] w-auto"
                       />
-                      <div className="mb-4 text-white text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
+                      <div className="mb-4 text-black text-2xl font-semibold -tracking-[0.5px] text-ColorBlack">
                       {translation.features.items[3].title}
                       </div>
                       <p className="line-clamp-3">
@@ -284,7 +284,7 @@ export default function Home() {
           </div>
           {/* Section Background */}
           {/* Background Divider Shape */}
-          <div className="min-h-[65px] w-full rotate-180 bg-[url('/assets/img/elements/home-4-divider-shape-1.svg')] bg-contain bg-[center_bottom] bg-repeat-x" />
+          <div className="min-h-[65px] w-full rotate-180 bg-[#e5e7eb]  bg-[url('/assets/img/elements/home-4-divider-shape-1.svg')] bg-contain bg-[center_bottom] bg-repeat-x" />
         </section>
         {/*...::: Features Section End :::... */}
         {/*...::: Content Section Start :::... */}
@@ -324,10 +324,10 @@ export default function Home() {
                   </p>
                   <div className="mt-[50px]">
                     <Link
-                      href="https://afrijour-dashboard.vercel.app/"
+                      href="https://Afrika Journals-dashboard.vercel.app/"
                       className="group relative z-10 inline-block"
                     >
-                      <div className="btn is-large is-rounded is-lunar-green">
+                      <div className="btn is-large is-rounded bg-yellow-500 hover:bg-yellow-600">
                        {translation.about.cta}
                       </div>
                       <div className="is-rounded absolute inset-0 -z-10 translate-y-[5px] bg-ColorBlack transition-all duration-300 ease-linear group-hover:translate-y-0" />
@@ -388,10 +388,10 @@ export default function Home() {
                   </p>
                   <div className="mt-[50px]">
                     <Link
-                      href="https://afrijour-dashboard.vercel.app/analytics"
+                      href="https://Afrika Journals-dashboard.vercel.app/analytics"
                       className="group relative z-10 inline-block"
                     >
-                      <div className="btn is-large is-rounded is-lunar-green">
+                      <div className="btn is-large is-rounded bg-yellow-500 hover:bg-yellow-600">
                       {translation.about2.cta}
                       </div>
                       <div className="is-rounded absolute inset-0 -z-10 translate-y-[5px] bg-ColorBlack transition-all duration-300 ease-linear group-hover:translate-y-0" />
@@ -423,12 +423,12 @@ export default function Home() {
             </div>
             {/* Section Container */}
           </div>
-          <div className="min-h-[65px] w-full rotate-180  bg-[url('/assets/img/elements/home-4-divider-shape-4.svg')] bg-contain bg-[center_bottom] bg-repeat-x -mb-1" />
+          <div className="min-h-[65px] w-full rotate-180 bg-[#9ca3af] bg-[url('/assets/img/elements/home-4-divider-shape-4.svg')] bg-contain bg-[center_bottom] bg-repeat-x -mb-1" />
           {/* Section Space */}
         </section>
         {/*...::: Content Section End :::... */}
         {/*...::: Ticket Slider Section Start :::... */}
-        <div className="section-topic bg-[#FFD372] pt-10">
+        <div className="section-topic bg-[#ccd6e8]  pt-10">
        
           <div className="relative">
             {/* Section Space */}
@@ -936,7 +936,7 @@ export default function Home() {
         <section className="course-section" id="journals">
           <div className="relative">
             {/* Section Background */}
-            <div className="bg-[#FFD372]">
+            <div className="bg-[#ccd6e8] ">
               <div className="min-h-[65px] w-full bg-[url('/assets/img/elements/home-4-divider-shape-4.svg')] bg-contain bg-[center_bottom] bg-repeat-x" />
               {/* Section Space */}
               <div className="section-space " style={{ paddingTop: "0px" }}>
@@ -978,7 +978,7 @@ export default function Home() {
                       data-jos_duration="0.7"
                       data-jos_counter={1}
                     >
-                      <div className="group flex flex-col gap-y-6 rounded-[10px] bg-white p-6 lg:p-[30px]">
+                      <div className="group flex flex-col gap-y-6 rounded-[10px] bg-[#ccd6e8]  p-6 lg:p-[30px]">
                         <div className="overflow-hidden rounded-[10px]">
                           <Image
                             src="/assets/img/content/course-img-1.jpeg"
@@ -991,7 +991,7 @@ export default function Home() {
                         <div className="flex flex-wrap justify-between gap-4 text-sm font-semibold">
                           <ul className="flex items-center gap-x-[22px]">
                             <li className="relative after:absolute after:left-[calc(100%+_10px)] after:top-1/2 after:h-[6px] after:w-[6px] after:-translate-y-1/2 after:rounded-[50%] after:bg-ColorBlack/80 last:after:hidden">
-                              <Link href="#" className="hover:text-ColorViolet">
+<Link href="#" className="hover:text-yellow-500">
                                 Technology
                               </Link>
                             </li>
@@ -1008,11 +1008,11 @@ export default function Home() {
                         </div>
                         <Link
                           href="#"
-                          className="line-clamp-2 text-xl font-bold leading-[1.25] text-ColorBlack group-hover:text-ColorViolet lg:text-2xl"
+                          className="line-clamp-2 text-xl font-bold leading-[1.25] text-ColorBlack group-hover:text-yellow-500 lg:text-2xl"
                         >
                           African Computer and Information Technology
                         </Link>
-                        <button className="btn is-large is-rounded mt-auto border-2 border-b-[5px] border-ColorBlack bg-[#ffd372] text-ColorBlack hover:bg-ColorViolet hover:text-white">
+                        <button className="btn is-large is-rounded mt-auto border-2 border-b-[5px] border-ColorBlack bg-[#ffd372] text-ColorBlack hover:bg-yellow-500 hover:text-white">
                           View Journal
                         </button>
                       </div>
@@ -1028,7 +1028,7 @@ export default function Home() {
                       data-jos_duration="0.7"
                       data-jos_counter={1}
                     >
-                      <div className="group flex flex-col gap-y-6 rounded-[10px] bg-white p-6 lg:p-[30px]">
+                      <div className="group flex flex-col gap-y-6 rounded-[10px] bg-[#ccd6e8]  p-6 lg:p-[30px]">
                         <div className="overflow-hidden rounded-[10px]">
                           <Image
                             src="/assets/img/content/course-img-2.jpeg"
@@ -1041,7 +1041,7 @@ export default function Home() {
                         <div className="flex flex-wrap justify-between gap-4 text-sm font-semibold">
                           <ul className="flex items-center gap-x-[22px]">
                             <li className="relative after:absolute after:left-[calc(100%+_10px)] after:top-1/2 after:h-[6px] after:w-[6px] after:-translate-y-1/2 after:rounded-[50%] after:bg-ColorBlack/80 last:after:hidden">
-                              <Link href="#" className="hover:text-ColorViolet">
+                              <Link href="#" className="hover:text-yellow-500">
                                 Science
                               </Link>
                             </li>
@@ -1058,11 +1058,11 @@ export default function Home() {
                         </div>
                         <Link
                           href="#"
-                          className="line-clamp-2 text-xl font-bold leading-[1.25] text-ColorBlack group-hover:text-ColorViolet lg:text-2xl"
+                          className="line-clamp-2 text-xl font-bold leading-[1.25] text-ColorBlack group-hover:text-yellow-500 lg:text-2xl"
                         >
                           Social Sciences and Humanities
                         </Link>
-                        <button className="btn is-large is-rounded mt-auto border-2 border-b-[5px] border-ColorBlack bg-[#ffd372] text-ColorBlack hover:bg-ColorViolet hover:text-white">
+                        <button className="btn is-large is-rounded mt-auto border-2 border-b-[5px] border-ColorBlack bg-[#ffd372] text-ColorBlack hover:bg-yellow-500 hover:text-white">
                           View Journal
                         </button>
                       </div>
@@ -1078,7 +1078,7 @@ export default function Home() {
                       data-jos_duration="0.7"
                       data-jos_counter={1}
                     >
-                      <div className="group flex flex-col gap-y-6 rounded-[10px] bg-white p-6 lg:p-[30px]">
+                      <div className="group flex flex-col gap-y-6 rounded-[10px] bg-[#ccd6e8]  p-6 lg:p-[30px]">
                         <div className="overflow-hidden rounded-[10px]">
                           <Image
                             src="/assets/img/content/course-img-3.jpeg"
@@ -1091,7 +1091,7 @@ export default function Home() {
                         <div className="flex flex-wrap justify-between gap-4 text-sm font-semibold">
                           <ul className="flex items-center gap-x-[22px]">
                             <li className="relative after:absolute after:left-[calc(100%+_10px)] after:top-1/2 after:h-[6px] after:w-[6px] after:-translate-y-1/2 after:rounded-[50%] after:bg-ColorBlack/80 last:after:hidden">
-                              <Link href="#" className="hover:text-ColorViolet">
+                              <Link href="#" className="hover:text-yellow-500">
                                 Medicine and Health
                               </Link>
                             </li>
@@ -1108,11 +1108,11 @@ export default function Home() {
                         </div>
                         <Link
                           href="#"
-                          className="line-clamp-2 text-xl font-bold leading-[1.25] text-ColorBlack group-hover:text-ColorViolet lg:text-2xl"
+                          className="line-clamp-2 text-xl font-bold leading-[1.25] text-ColorBlack group-hover:text-yellow-500 lg:text-2xl"
                         >
                           Journal of Medicine and Health Sciences
                         </Link>
-                        <button className="btn is-large is-rounded mt-auto border-2 border-b-[5px] border-ColorBlack bg-[#ffd372] text-ColorBlack hover:bg-ColorViolet hover:text-white">
+                        <button className="btn is-large is-rounded mt-auto border-2 border-b-[5px] border-ColorBlack bg-[#ffd372] text-ColorBlack hover:bg-yellow-500 hover:text-white">
                           View Journal
                         </button>
                       </div>
@@ -1184,10 +1184,10 @@ export default function Home() {
                   </ul>
                   <div className="mt-[50px]">
                     <Link
-                      href="https://afrijour-dashboard.vercel.app/"
+                      href="https://Afrika Journals-dashboard.vercel.app/"
                       className="group relative z-10 inline-block"
                     >
-                      <div className="btn is-large is-rounded is-lunar-green">
+                      <div className="btn is-large is-rounded bg-yellow-500 hover:bg-yellow-600">
                         {translation.journals.cta}
                       </div>
                       <div className="is-rounded absolute inset-0 -z-10 translate-y-[5px] bg-ColorBlack transition-all duration-300 ease-linear group-hover:translate-y-0" />
@@ -1223,7 +1223,7 @@ export default function Home() {
         </section>
         {/*...::: Content Section End :::... */}
         {/*...::: Testimonial Section Start :::... */}
-        <section className="section-testimonial bg-[#324438] text-white pt-20" id="testimonials">
+        <section className="section-testimonial bg-[#babec5] text-white pt-20" id="testimonials">
           <div className="relative">
             {/* Section Container */}
             <div className="container-default">
@@ -1239,7 +1239,7 @@ export default function Home() {
               >
                 {/* Section Content Block */}
                 <div className="mx-auto max-w-[670px]">
-                  <h2 className="text-center font-DmSans text-yellow-500 -tracking-[1px]">
+                  <h2 className="text-center font-DmSans text-yellow-750 -tracking-[1px]">
                     {translation.testimonials.title2}
                   </h2>
                 </div>
@@ -1328,7 +1328,7 @@ export default function Home() {
         <section className="section-FAQ" id="faq">
           <div className="realative">
             {/* Section Background */}
-            <div className="bg-[#ffd372]">
+            <div className="bg-[#ccd6e8] ">
               {/* Section Space */}
               <div className="section-space">
                 {/* Section Container */}
@@ -1418,7 +1418,7 @@ export default function Home() {
                             <p className="pt-5">
                               Partner Repositories are collaborative platforms
                               that host a wide range of African research
-                              publications. AfriJour partners with these
+                              publications. Afrika Journals partners with these
                               repositories to ensure comprehensive access to
                               scholarly articles and papers from across the
                               continent. Through our platform, you can
@@ -1434,7 +1434,7 @@ export default function Home() {
                           {/* Accordion Header */}
                           <div className="accordion-header relative pr-8 text-xl font-semibold text-ColorBlack">
                             <button className="flex-1 text-left">
-                              Q. How does AfriJour&apos;s indexing system
+                              Q. How does Afrika Journals&apos;s indexing system
                               benefit researchers?
                             </button>
                             <div className="accordion-icon-2 absolute right-0 top-0">
@@ -1462,7 +1462,7 @@ export default function Home() {
                           {/* Accordion Header */}
                           <div className="accordion-header relative pr-8 text-xl font-semibold text-ColorBlack">
                             <button className="flex-1 text-left">
-                              Q. What role do Reviewers play on AfriJour?
+                              Q. What role do Reviewers play on Afrika Journals?
                             </button>
                             <div className="accordion-icon-2 absolute right-0 top-0">
                               <ChevronDown />
@@ -1474,7 +1474,7 @@ export default function Home() {
                             <p className="pt-5">
                               Reviewers are integral to maintaining the quality
                               and credibility of the research featured on
-                              AfriJour. They are experts in their fields who
+                              Afrika Journals. They are experts in their fields who
                               conduct rigorous peer reviews to ensure that the
                               academic content meets the highest standards of
                               excellence before it is published on our platform.
@@ -1532,22 +1532,22 @@ export default function Home() {
             </div>
             {/* Section Space */}
             {/* Background Divider Shape */}
-            <div className="absolute bottom-0 left-0 -mb-px h-10 w-full bg-[url('/assets/img/elements/home-4-divider-shape-1.svg')] bg-cover bg-[center_top] bg-repeat-x xxl:h-14" />
-          </div>
+            <div className="absolute bottom-0 left-0 -mb-px h-10 w-full background-color:#e5e7eb bg-[url('/assets/img/elements/home-4-divider-shape-1.svg')] bg-cover bg-[center_top] bg-repeat-x xxl:h-14" />
+            </div>
         </section>
         {/*...::: Newsletter Section End :::... */}
         <Chatbot
-        title="Afrijour Assistant"
+        title="Afrika Journals Assistant"
         subtitle="Online"
-        botName="Afrijour"
-        welcomeMessage="Hi, I'm Afrijour Chatbot. How can I help you today?"
+        botName="Afrika Journals"
+        welcomeMessage="Hi, I'm Afrika Journals Chatbot. How can I help you today?"
       />
       <Toaster />
       </main>
        
       {/*...::: Footer Section Start :::... */}
       <footer className="section-footer">
-        <div className="bg-[#324438] text-white">
+        <div className="bg-[#ccd6e8] text-black">
           {/* Footer Area Center */}
           <div className="text-ColorBlack">
             {/* Footer Center Spacing */}
@@ -1567,7 +1567,7 @@ export default function Home() {
                         height={24}
                       />
                     </Link> */}
-                    <h1 className="text-5xl text-yellow-500">AfriJour</h1>
+                    <h1 className="text-5xl text-yellow-500">Afrika Journals</h1>
                     {/* Footer Content */}
                     <div className="text-yellow-100">
                       {/* Footer About Text */}
@@ -1576,10 +1576,10 @@ export default function Home() {
                       </div>
                       {/* Footer Mail */}
                       <Link
-                        href="mailto:info@afrijour.com"
+                        href="mailto:info@Afrika Journals.com"
                         className="my-6 block underline-offset-4 transition-all duration-300 hover:underline"
                       >
-                        info@afrijour.com
+                        info@Afrika Journals.com
                       </Link>
                       {/* Footer Social Link */}
                       <div className="flex flex-wrap gap-5">
@@ -1634,7 +1634,7 @@ export default function Home() {
                     <ul className="flex flex-col gap-y-[10px] capitalize">
                       <li>
                         <Link
-                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-black underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/"
                         >
                           {translation.navigation.home}
@@ -1642,7 +1642,7 @@ export default function Home() {
                       </li>
                       <li>
                         <Link
-                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-black underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/about#"
                         >
                           {translation.navigation.about}
@@ -1650,7 +1650,7 @@ export default function Home() {
                       </li>
                       <li>
                         <Link
-                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-black underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/features#"
                         >
                           {translation.navigation.features}
@@ -1658,7 +1658,7 @@ export default function Home() {
                       </li>
                       <li>
                         <Link
-                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-black underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/journals#"
                         >
                           {translation.navigation.journals}
@@ -1666,7 +1666,7 @@ export default function Home() {
                       </li>
                       <li>
                         <Link
-                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-black underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/faq#"
                         >
                           {translation.navigation.faq}
@@ -1686,7 +1686,7 @@ export default function Home() {
                     <ul className="flex flex-col gap-y-[10px] capitalize">
                       <li>
                         <Link
-                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-black underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/signup"
                         >
                           Signup
@@ -1694,7 +1694,7 @@ export default function Home() {
                       </li>
                       <li>
                         <Link
-                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-black underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/login"
                         >
                           Login
@@ -1702,7 +1702,7 @@ export default function Home() {
                       </li>
                       <li>
                         <Link
-                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-black underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/error-404"
                         >
                           404 Not found
@@ -1710,7 +1710,7 @@ export default function Home() {
                       </li>
                       <li>
                         <Link
-                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-black underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                           href="/reset-password"
                         >
                           Password Reset
@@ -1733,7 +1733,7 @@ export default function Home() {
                           href="https://www.example.com/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-black underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                         >
                           Support
                         </Link>
@@ -1743,7 +1743,7 @@ export default function Home() {
                           href="https://www.example.com/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-black underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                         >
                           Privacy policy
                         </Link>
@@ -1753,7 +1753,7 @@ export default function Home() {
                           href="https://www.example.com/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-black underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                         >
                           Terms &amp; Conditions
                         </Link>
@@ -1763,7 +1763,7 @@ export default function Home() {
                           href="https://www.example.com/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-black underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                         >
                           Strategic finance
                         </Link>
@@ -1773,7 +1773,7 @@ export default function Home() {
                           href="https://www.example.com/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:opcity-100 text-yellow-100 underline-offset-4 transition-all duration-300 ease-linear hover:underline"
+                          className="hover:opcity-100 text-black underline-offset-4 transition-all duration-300 ease-linear hover:underline"
                         >
                           Video guide
                         </Link>
