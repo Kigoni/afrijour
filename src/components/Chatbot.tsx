@@ -10,6 +10,7 @@ import React from "react";
 import { BotMessageSquare, MessageCircle, Send, X } from "lucide-react";
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
+
 interface ChatMessage {
   type: "user" | "bot";
   message: string;
@@ -89,6 +90,7 @@ const ChatBot: React.FC<ChatBotProps> = ({
         chatContainerRef.current.scrollHeight;
     }
   }, [isLoading]);
+
   return (
     <>
       {/* component */}
@@ -108,7 +110,7 @@ const ChatBot: React.FC<ChatBotProps> = ({
         {isChatOpen && (
           <div
             id="hs-chatbot-container"
-            className={`fixed bottom-[calc(4rem+1.5rem)] right-0 mr-4 bg-muted borrder-r-2 border border-gray-200 rounded-xl w-[440px] h-[600px] z-[500] ${
+            className={`fixed bottom-[calc(4rem+1.5rem)] right-0 mr-4 bg-yellow-50 borrder-r-2 border border-gray-200 rounded-xl w-[440px] h-[600px] z-[500] ${
               isChatOpen ? "chat-open" : "chat-closed"
             }`}
           >

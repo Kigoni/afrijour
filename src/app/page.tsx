@@ -17,6 +17,7 @@ import WorldMap from "@/components/WorldMap";
 import { Toaster } from "react-hot-toast";
 import Chatbot from "../components/Chatbot";
 import { Language, translations } from "@/data/content";
+import DisclaimerPopup from "@/components/DisclaimerPopup";
 
 
 export default function Home() {
@@ -50,6 +51,8 @@ export default function Home() {
     };
   }, []);
   return (
+    <div className="page-wrapper relative z-[1] bg-white">
+       <DisclaimerPopup />
     <div className="page-wrapper relative z-[1] bg-white">  
       {/*...::: Header Start :::... */}
       <Navbar setSelectedLanguage={handleLanguageChange} translation={translation}  selectedLanguage={selectedLanguage}/>
@@ -57,8 +60,10 @@ export default function Home() {
       <main className="main-wrapper relative overflow-hidden">
         {/*...::: Hero Section Start :::... */}
         <section className="section-hero">
-          <div className="relative z-10">
-            <div className="bg-[#ccd6e8]">
+        <div className="relative z-10">
+          <div className="bg-gradient-to-r from-[#9baed1] to-[#f5f7fa]">
+
+
             {/* Hero Space */}
             <div className="pb-20 pt-[100px] md:pt-[120px] lg:pb-[110px] lg:pt-[190px]">
               {/* Section Container */}
@@ -129,6 +134,7 @@ export default function Home() {
             {/* <div className="min-h-[65px] w-full bg-[url('/assets/img/elements/home-4-divider-shape-1.svg')] bg-contain bg-[#e5e7eb]  bg-[center_bottom] bg-repeat-x" /> */}
           </div>
         </section>
+      
         {/*...::: Hero Section End :::... */}
         {/*...::: Features Section Start :::... */}
         <section className="section-features" id="features">
@@ -423,7 +429,7 @@ export default function Home() {
             </div>
             {/* Section Container */}
           </div>
-          <div className="min-h-[65px] w-full rotate-180 bg-[#9ca3af] bg-[url('/assets/img/elements/home-4-divider-shape-4.svg')] bg-contain bg-[center_bottom] bg-repeat-x -mb-1" />
+          <div className="min-h-[65px] bg-white  bg-contain bg-[center_bottom] bg-repeat-x -mb-1" />
           {/* Section Space */}
         </section>
         {/*...::: Content Section End :::... */}
@@ -446,7 +452,7 @@ export default function Home() {
                   data-jos_counter={1}
                 >
                   {/* Section Content Block */}
-                  <div className="mx-auto max-w-[636px]">
+                  <div className="mx-auto max-w-[636px] ">
                     <h2 className="text-center font-DmSans -tracking-[1px]">
                      {translation.blog.title}
                     </h2>
@@ -937,7 +943,7 @@ export default function Home() {
           <div className="relative">
             {/* Section Background */}
             <div className="bg-[#ccd6e8] ">
-              <div className="min-h-[65px] w-full bg-[url('/assets/img/elements/home-4-divider-shape-4.svg')] bg-contain bg-[center_bottom] bg-repeat-x" />
+              <div className="min-h-[65px]  w-full bg-[url('/assets/img/elements/home-4-divider-shape-4.svg')] bg-contain bg-[center_bottom] bg-repeat-x" />
               {/* Section Space */}
               <div className="section-space " style={{ paddingTop: "0px" }}>
                 {/* Section Container */}
@@ -1255,13 +1261,13 @@ export default function Home() {
                       <Star fill="orange" strokeWidth={0} className="size-8" />
                       <Star fill="orange" strokeWidth={0} className="size-8" />
                     </div>
-                    <p className="mb-0">
+                    <p className="mb-0 text-ColorBlack">
                       &quot;The online jornals were truly a lifesaver. Without
                       their expertise and kind help I could not have achieved
                       the best results in my class. I followed what they said
                       and they helped me get the best grades.&quot;
                     </p>
-                    <div className="flex items-center gap-[10px]">
+                    <div className="flex items-center gap-[10px] text-ColorBlack">
                       <Image
                         src="/assets/img/testimonial-avatar-1.png"
                         alt="testimonial-avatar-1"
@@ -1288,12 +1294,12 @@ export default function Home() {
                       <Star fill="orange" strokeWidth={0} className="size-8" />
                       <Star fill="orange" strokeWidth={0} className="size-8" />
                     </div>
-                    <p className="mb-0 ">
+                    <p className="mb-0 text-ColorBlack">
                       &quot;I actually wanted to learn more than what was
                       taught. I knew I couldn&apos;t be a student, but I wanted
-                      to at least understand some of the basics. Then I bought
-                      african journal &amp; completed the whole course now I am
-                      a professor.&quot;
+                      to at least understand some of the basics. Then I visited
+                      Afrika Journals &amp; found the information I needed
+                      .&quot;
                     </p>
                     <div className="flex items-center gap-[10px]">
                       <Image
@@ -1306,7 +1312,7 @@ export default function Home() {
                         <span className="block font-semibold text-ColorBlack">
                           Kristin Watson
                         </span>
-                        <span className="text-sm leading-[1.42]">
+                        <span className="text-sm leading-[1.42] text-ColorBlack">
                           Student of Cambridge University, UK
                         </span>
                       </div>
@@ -1324,7 +1330,54 @@ export default function Home() {
           </div>
         </section>
         {/*...::: Testimonial Section End :::... */}
-        {/*...::: FAQ Section Start :::... */}
+
+
+        {/*...::: Newsletter Section Start :::... */}
+        <section className="section-newsletter">
+          <div className="relative">
+            {/* Section Space */}
+            <div className="section-space">
+              {/* Section Container */}
+              <div className="container-default">
+                {/* Newsletter Area */}
+                <div
+                  className="mx-auto flex max-w-[720px] flex-col justify-center text-center jos"
+                  data-jos_once={1}
+                  data-jos_animation="fade-up"
+                  data-jos_timingfunction="ease"
+                  data-jos_duration="0.7"
+                  data-jos_delay="0.5"
+                  data-jos_counter={1}
+                >
+                  <h2 className="mb-5 font-DmSans -tracking-[1px]">
+                   {translation.map.title}
+                  </h2>
+                  <p className="mb-[50px]">
+                  {translation.map.description}
+                  </p>
+                </div>
+                <div className="mb-80 mt-20">
+                  <WorldMap />
+                </div>
+                {/* Newsletter Area */}
+              </div>
+              {/* Section Container */}
+            </div>
+            {/* Section Space */}
+            {/* Background Divider Shape */}
+            <div className="absolute bottom-0 left-0 -mb-px h-10 w-full background-color:#e5e7eb bg-[url('/assets/img/elements/home-4-divider-shape-1.svg')] bg-cover bg-[center_top] bg-repeat-x xxl:h-14" />
+            </div>
+        </section>
+        {/*...::: Newsletter Section End :::... */}
+        <Chatbot
+        title="Afrika Journals Assistant"
+        subtitle="Online"
+        botName="Afrika Journals"
+        welcomeMessage="Hi, I'm Afrika Journals Chatbot. How can I help you today?"
+      />
+      <Toaster />
+      </main>
+       {/*...::: FAQ Section Start :::... */}
         <section className="section-FAQ" id="faq">
           <div className="realative">
             {/* Section Background */}
@@ -1499,55 +1552,10 @@ export default function Home() {
           </div>
         </section>
         {/*...::: FAQ Section End :::... */}
-        {/*...::: Newsletter Section Start :::... */}
-        <section className="section-newsletter">
-          <div className="relative">
-            {/* Section Space */}
-            <div className="section-space">
-              {/* Section Container */}
-              <div className="container-default">
-                {/* Newsletter Area */}
-                <div
-                  className="mx-auto flex max-w-[720px] flex-col justify-center text-center jos"
-                  data-jos_once={1}
-                  data-jos_animation="fade-up"
-                  data-jos_timingfunction="ease"
-                  data-jos_duration="0.7"
-                  data-jos_delay="0.5"
-                  data-jos_counter={1}
-                >
-                  <h2 className="mb-5 font-DmSans -tracking-[1px]">
-                   {translation.map.title}
-                  </h2>
-                  <p className="mb-[50px]">
-                  {translation.map.description}
-                  </p>
-                </div>
-                <div className="mb-80 mt-20">
-                  <WorldMap />
-                </div>
-                {/* Newsletter Area */}
-              </div>
-              {/* Section Container */}
-            </div>
-            {/* Section Space */}
-            {/* Background Divider Shape */}
-            <div className="absolute bottom-0 left-0 -mb-px h-10 w-full background-color:#e5e7eb bg-[url('/assets/img/elements/home-4-divider-shape-1.svg')] bg-cover bg-[center_top] bg-repeat-x xxl:h-14" />
-            </div>
-        </section>
-        {/*...::: Newsletter Section End :::... */}
-        <Chatbot
-        title="Afrika Journals Assistant"
-        subtitle="Online"
-        botName="Afrika Journals"
-        welcomeMessage="Hi, I'm Afrika Journals Chatbot. How can I help you today?"
-      />
-      <Toaster />
-      </main>
        
       {/*...::: Footer Section Start :::... */}
       <footer className="section-footer">
-        <div className="bg-[#ccd6e8] text-black">
+        <div className="bg-[#babec5] text-black">
           {/* Footer Area Center */}
           <div className="text-ColorBlack">
             {/* Footer Center Spacing */}
@@ -1567,9 +1575,9 @@ export default function Home() {
                         height={24}
                       />
                     </Link> */}
-                    <h1 className="text-5xl text-yellow-500">Afrika Journals</h1>
+                    <h1 className="text-5xl text-yellow-300">Afrika Journals</h1>
                     {/* Footer Content */}
-                    <div className="text-yellow-100">
+                    <div className="text-yellow-200">
                       {/* Footer About Text */}
                       <div className="lg:max-w-[416px]">
                         {translation.footer.description}
@@ -1627,7 +1635,7 @@ export default function Home() {
                   {/* Footer Widget Item */}
                   <div className="flex flex-col gap-y-7 md:col-span-1 lg:col-span-1 ">
                     {/* Footer Widget Title */}
-                    <div className="text-xl font-semibold capitalize text-yellow-500">
+                    <div className="text-xl font-semibold capitalize text-yellow-300">
                       Pages
                     </div>
                     {/* Footer Navbar */}
@@ -1678,7 +1686,7 @@ export default function Home() {
                   {/* Footer Widget Item */}
                   <div className="flex flex-col gap-y-6 md:col-span-1 lg:col-span-1">
                     {/* Footer Title */}
-                    <div className="text-xl font-semibold capitalize text-yellow-500">
+                    <div className="text-xl font-semibold capitalize text-yellow-300">
                       Utility pages
                     </div>
                     {/* Footer Title */}
@@ -1722,7 +1730,7 @@ export default function Home() {
                   {/* Footer Widget Item */}
                   <div className="flex flex-col gap-y-6 md:col-span-1 lg:col-span-1">
                     {/* Footer Title */}
-                    <div className="text-xl font-semibold capitalize text-yellow-500">
+                    <div className="text-xl font-semibold capitalize text-yellow-300">
                       Resources
                     </div>
                     {/* Footer Title */}
@@ -1808,6 +1816,7 @@ export default function Home() {
         </div>
       </footer>
       {/*...::: Footer Section End :::... */}
+    </div>
     </div>
   );
 }

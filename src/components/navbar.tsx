@@ -138,10 +138,10 @@ const Navbar = ({ setSelectedLanguage, selectedLanguage, translation }: NavbarPr
           <div className="flex items-center justify-between gap-x-8">
             <Link href="/" className="ml+10">
               <Image
-                src="/assets/img/logo.webp"
+                src="/logo.png"
                 alt="Afrika Journals Logo"
-                width={109}
-                height={24}
+                width={170}
+                height={37}
               />
             </Link>
 

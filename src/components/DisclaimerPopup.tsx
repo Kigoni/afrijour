@@ -34,7 +34,7 @@ const DisclaimerPopup: React.FC = () => {
         </div>
 
         <div className="space-y-4 text-gray-700">
-          <h3 className="font-semibold text-lg">Welcome to Afrika Journals Platform!</h3>
+        <h3 className="font-bold text-lg tracking-normal">Welcome to Afrika Journals Platform!</h3>
 
           <p>
             Thank you for visiting our site. While we are constantly updating our data and features, please note
