@@ -57,7 +57,7 @@ const DisclaimerPopup: React.FC = () => {
           </p>
 
           <p>
-            Thank you for your understanding and support as we work to enhance your experience on African
+            Thank you for your understanding and support as we work to enhance your experience on Afrika
             Journals Platform.
           </p>
         </div>

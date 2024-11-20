@@ -389,11 +389,220 @@ export const translations: { [key: string]: Translation }  =
           "Guide vidéo"
         ]
       }
+    },
+    pt: {
+      navigation: {
+        home: "Início",
+        features: "Características",
+        about: "Sobre",
+        journals: "Revistas",
+        testimonials: "Depoimentos",
+        faq: "Perguntas Frequentes"
+      },
+      dashboard: "Painel",
+      hero: {
+        title: "Destaque para Revistas Africanas",
+        subtitle: "Bem-vindo ao AfriJour, sua porta de entrada para o mundo rico e diverso da erudição africana. Estamos dedicados a amplificar as vozes das revistas africanas, oferecendo uma plataforma onde suas narrativas e perspectivas únicas podem brilhar intensamente.",
+        cta: "Comece Agora",
+        promo: "As últimas revistas estão disponíveis"
+      },
+      features: {
+        title: "Características especiais que fazem do AfriJour o melhor",
+        items: [
+          {
+            icon: "icon-violet-feature-1",
+            title: "Revistas",
+            description: "Uma coleção diversa de revistas africanas de várias disciplinas, hospedadas em nossa plataforma."
+          },
+          {
+            icon: "icon-violet-feature-2",
+            title: "Repositórios",
+            description: "Plataformas seguras e estáveis para hospedar revistas, garantindo sua preservação e acessibilidade a longo prazo."
+          },
+          {
+            icon: "icon-violet-feature-3",
+            title: "Índices",
+            description: "Índices de Revistas Africanas que aumentam a visibilidade e acessibilidade das revistas africanas na comunidade acadêmica global."
+          },
+          {
+            icon: "icon-violet-feature-4",
+            title: "Revisores",
+            description: "Acadêmicos africanos que contribuem para o processo de revisão por pares, garantindo padrões de qualidade elevados e um rigoroso debate acadêmico."
+          }
+        ]
+      },
+      about: {
+        title: "Descubra a Rica Tapeçaria do Conhecimento Africano",
+        description: "No AfriJour, acreditamos que a erudição africana merece um lugar de destaque no cenário global. Nossa plataforma se compromete a mostrar a riqueza intelectual e a diversidade que emanam do continente africano. Através de análises inovadoras e uma curadoria dedicada, empoderamos acadêmicos e pesquisadores africanos, fomentando a colaboração e a troca de conhecimentos em escala global.",
+        description2: "Nosso sistema de indexação inovador garante que a riqueza do trabalho acadêmico africano está organizada e facilmente pesquisável, facilitando a descoberta eficiente do conteúdo relevante. Para manter a integridade e a qualidade da pesquisa que apresentamos, o AfriJour se baseia em uma equipe dedicada de Revisores que avaliam cuidadosamente cada submissão.",
+        cta: "Explorar Mais"
+      },
+      about2: {
+        title: "Empoderar acadêmicos, pesquisadores e professores africanos.",
+        description: "No AfriJour, nossa missão é elevar e apoiar acadêmicos, pesquisadores e professores africanos, fornecendo uma plataforma que amplifique suas contribuições e aumente seu impacto global. Oferecemos acesso extenso a uma ampla gama de revistas e publicações de pesquisa africanas, garantindo que seu trabalho obtenha a visibilidade que merece.",
+        description2: "Além da visibilidade e do acesso, o AfriJour fomenta oportunidades de colaboração e networking dentro da comunidade acadêmica. Nosso sistema de indexação inovador e nosso rigoroso processo de revisão por pares criam um ambiente onde a pesquisa de qualidade é destacada e o diálogo acadêmico é incentivado.",
+        cta: "Explorar Mais"
+      },
+      journals: {
+        title: "Navegue em nossas revistas que são exatamente o que você precisa",
+        description: "Escolha entre mais de 20.700 revistas e caminhos de aprendizado, com dezenas adicionadas cada semana. Termine com cursos que afinam suas habilidades e enriquecem seu dia a dia!",
+        cta: "Ir para o Painel"
+      },
+      blog: {
+        title: "Aqui estão vários tópicos que melhorarão sua pesquisa",
+        subtitle: "Navegue em nossas revistas que são exatamente o que você precisa",
+        description: "Escolha entre mais de 20.700 revistas e caminhos de aprendizado, com dezenas adicionadas cada semana. Termine com cursos que afinam suas habilidades e enriquecem seu dia a dia!",
+      },
+      testimonials: {
+        title: "Compartilhe seu conhecimento e experiência com outros",
+        subtitle: "Researchers like you achieve their goals through our journals",
+        title2: "Pesquisadores como você alcançam seus objetivos através de nossas revistas",
+        description: "Vemos o AfriJour como a principal porta de entrada para as revistas africanas, fomentando um ecossistema vibrante de intercâmbio e descoberta acadêmica. Aspiramos a ser um catalisador para o reconhecimento e a apreciação global da erudição africana, inspirando e capacitando a próxima geração de acadêmicos e líderes de pensamento africanos."
+      },
+      faq: {
+        title: "Perguntas frequentes sobre nosso Afrijour",
+        description: "Encourajamos nossos estudantes, pesquisadores e professores a nos fazerem qualquer pergunta sobre nossas revistas. Nossos mentores qualificados estão prontos para responder a todas as suas perguntas 24 horas por dia, 7 dias por semana."
+      },
+      map: {
+        title: "Comece a aprender hoje e amplie seus conhecimentos em qualquer nível",
+        description: "Temos uma aplicação de aprendizagem facilmente descarregável em qualquer dispositivo e em qualquer lugar para experimentar uma plataforma de e-learning exclusiva para uma educação de classe mundial."
+      },
+      footer: {
+        copyright: "© Direitos autorais 2024, todos os direitos reservados",
+        contact: "info@afrijour.com",
+        description: "Destaque e eleve as revistas africanas. Visamos fomentar uma apreciação global da riqueza intelectual e da diversidade que a África tem para oferecer.",
+        primaryPages: [
+          "Início",
+          "Sobre Nós",
+          "Serviços",
+          "Preços",
+          "Contacto"
+        ],
+        utilityPages: [
+          "Registar",
+          "Entrar",
+          "404 Não encontrado",
+          "Redefinir Senha"
+        ],
+        resources: [
+          "Suporte",
+          "Política de privacidade",
+          "Termos e condições",
+          "Finanças estratégicas",
+          "Guia de vídeo"
+        ]
+      }
+    },
+    sw: {
+      "navigation": {
+        "home": "Ikhaya",
+        "features": "Izici",
+        "about": "Mayelana",
+        "journals": "Izincwadi",
+        "testimonials": "Izitatimende",
+        "faq": "Imibuzo Ebuzwa Ngokuvamile"
+      },
+      "dashboard": "I-Dashboard",
+      "hero": {
+        "title": "Ukugqamisa Izincwadi Zase-Afrika",
+        "subtitle": "Siyakwamukela ku-AfriJour, umnyango wakho oya emhlabeni ocebile nowahlukahlukene wezincwadi zase-Afrika. Sizinikele ekukhuliseni amazwi ezincwadi zase-Afrika, sinikeza inkundla lapho izindaba zazo ezihlukile nemibono zazo zingakhanya khona ngokugqamile.",
+        "cta": "Qala Manje",
+        "promo": "Izincwadi Zakamuva Ziyatholakala"
+      },
+      "features": {
+        "title": "Izici Ezikhethekile Ezibeka I-AfriJour Phambili",
+        "items": [
+          {
+            "icon": "icon-violet-feature-1",
+            "title": "Izincwadi",
+            "description": "Iqoqo elihlukahlukene lezincwadi zase-Afrika ezivela ezikolweni ezahlukene, ezitholakala enkundleni yethu."
+          },
+          {
+            "icon": "icon-violet-feature-2",
+            "title": "Amarepositori",
+            "description": "Izinkundla eziphephile nezizinzile zokugcina izincwadi, ziqinisekisa ukuhlala zikhona nokutholakala kwazo esikhathini eside."
+          },
+          {
+            "icon": "icon-violet-feature-3",
+            "title": "Izinkomba",
+            "description": "Izinkomba Zezincwadi Zase-Afrika ezenyusa ukubonakala nokutholakala kwezincwadi zase-Afrika emiphakathini yesayensi yomhlaba."
+          },
+          {
+            "icon": "icon-violet-feature-4",
+            "title": "Ababuyekezi",
+            "description": "Ososayensi base-Afrika abafaka isandla kwinqubo yokubuyekeza ontanga, beqinisekisa amazinga aphezulu nokuxoxisana ngokuqinile kwezemfundo."
+          }
+        ]
+      },
+      "about": {
+        "title": "Thola Ubukhazikhazi Bezimfundiso Zase-Afrika",
+        "description": "E-AfriJour, sikholelwa ukuthi izimfundiso zase-Afrika zifanele indawo ephakeme esiteji somhlaba. Inkundla yethu izinikele ekubonakaliseni ukuchuma kobuhlakani obuqhamuka ezwekazini lase-Afrika. Ngokusebenzisa i-analytics entsha kanye nokuqoqwa okwenzelwe ukubeka phezulu, siqhakambisa ososayensi base-Afrika, sikhuthaza ukubambisana komhlaba wonke nokwabelana ngolwazi.",
+        "description2": "Uhlelo lwethu lokwenza izinkomba ezibuhlakani luqinisekisa ukuthi umsebenzi omkhulu wezemfundo wase-Afrika uhlukaniswa futhi uyatholakala kalula, kwenza kube lula ukuthola okuqukethwe okufanele. Ukuze sigcine ubuqotho nekhwalithi yocwaningo esikubonisayo, i-AfriJour incike eqenjini elizinikele lababuyekezi abahlola ngokucophelela isiphakamiso ngasinye.",
+        "cta": "Hlola Okuningi"
+      },
+      "about2": {
+        "title": "Ukuqhakambisa Ososayensi Base-Afrika, Abacwaningi noProfesa.",
+        "description": "E-AfriJour, umgomo wethu ukukhuphula nokweseka ososayensi base-Afrika, abacwaningi, noprofesa ngokunikeza inkundla eqhakambisa iminikelo yabo futhi yandise umthelela wabo emhlabeni wonke. Sinikeza ukufinyelela okubanzi ezincwadini eziningi zase-Afrika nasemicwaningweni yezocwaningo, siqinisekisa ukuthi umsebenzi wabo uthola ukubonakala okufanele.",
+        "description2": "Ngaphezu kokubonakala nokufinyelela, i-AfriJour ikhuthaza ukubambisana namathuba wokuxhumana phakathi komphakathi wezemfundo. Uhlelo lwethu lokwenza izinkomba ezibuhlakani kanye nenqubo yokubuyekeza ontanga eqinile kudala indawo lapho ucwaningo lwekhwalithi lukhonjiswa khona futhi inkulumo-mpikiswano yezemfundo ikhuthazwa.",
+        "cta": "Hlola Okuningi"
+      },
+      "journals": {
+        "title": "Dlulisa amehlo ezincwadini zethu ezifanele wena",
+        "description": "Khetha ezincwadini ezingaphezu kuka-20,700 kanye nezindlela zokufunda, nezinsuku ezingaphezu kwezingu-10 ezengeziwe njalo ngesonto. Yakha izifundo ezizokwandisa amakhono akho futhi ukwanelise usuku lwakho nosuku.",
+        "cta": "Iya ku-Dashboard"
+      },
+      "blog": {
+        "title": "Nazi izihloko eziningi ezizothuthukisa ucwaningo lwakho",
+        "subtitle": "Dlulisa amehlo ezincwadini zethu ezifanele wena",
+        "description": "Khetha ezincwadini ezingaphezu kuka-20,700 kanye nezindlela zokufunda, nezinsuku ezingaphezu kwezingu-10 ezengeziwe njalo ngesonto. Yakha izifundo ezizokwandisa amakhono akho futhi ukwanelise usuku lwakho nosuku."
+      },
+      "testimonials": {
+        "title": "Yabelana ngolwazi nolwazi lwakho nabanye",
+        "subtitle": "Abacwaningi abanjengawe bafeza izinhloso zabo ngezincwadi zethu",
+        "title2": "Abacwaningi abanjengawe bafeza izinhloso zabo ngezincwadi zethu",
+        "description": "Sibona i-AfriJour njengegwiba eliyinhloko lezincwadi zase-Afrika, sakha uhlelo olujabulisayo lokushintshana kolwazi nokuqoqwa kwezincwadi. Sifisa ukuba isisusa sokubonwa komhlaba wonke nokwaziswa kwezincwadi zase-Afrika, sigqugquzela futhi siqhakambisa isizukulwane esilandelayo sososayensi base-Afrika nabaholi bemicabango."
+      },
+      "faq": {
+        "title": "Qala ukufunda namuhla futhi wandise ulwazi lwakho kunoma yiliphi izinga",
+        "description": "Sinezinhlelo zokusebenza zokufunda ezilula ongazilanda kunoma iyiphi idivayisi noma yikuphi ukuze ube nolwazi olukhethekile lokufunda ku-inthanethi."
+      },
+      "map": {
+        "title": "Imibuzo ebuzwa ngokuvamile mayelana ne-AfriJour yethu",
+        "description": "Sikhuthaza abafundi bethu, abacwaningi, noprofesa ukuba babuze imibuzo mayelana nezincwadi zethu. Abeluleki bethu abanolwazi bahlale belungele ukuphendula yonke imibuzo yakho amahora angama-24/7."
+      },
+      "footer": {
+        "copyright": "© Amalungelo Agciniwe 2024",
+        "description": "Khanyisa futhi ukhuphule izincwadi zase-Afrika. Sihlose ukukhuthaza ukwaziswa komhlaba wonke ngobuningi bobuhlakani nezihlukizo i-Afrika ezinazo.",
+        "contact": "info@afrijour.com",
+        "primaryPages": [
+          "Ikhaya",
+          "Mayelana Nathi",
+          "Izinsizakalo",
+          "Amanani",
+          "Xhumana Nathi"
+        ],
+        "utilityPages": [
+          "Bhalisela",
+          "Ngena ngemvume",
+          "404 Akutholakalanga",
+          "Setha kabusha iphasiwedi"
+        ],
+        "resources": [
+          "Ukusekela",
+          "Inqubomgomo yobumfihlo",
+          "Imibandela",
+          "Izimali zamasu",
+          "Umhlahlandlela wevidiyo"
+        ]
+      }
     }
+    
   };
 
   export const languages: Language[] = [
     { code: 'en', name: 'English' },
     { code: 'es', name: 'Español' },
     { code: 'fr', name: 'Français' },
+    { code: 'pt', name: 'Português' },
+    { code: 'sw', name: 'Zulu' },
   ];
