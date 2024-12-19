@@ -34,31 +34,28 @@ const DisclaimerPopup: React.FC = () => {
         </div>
 
         <div className="space-y-4 text-gray-700">
-        <h3 className="font-bold text-lg tracking-normal">Welcome to Afrika Journals Platform!</h3>
+          <h3 className="font-bold text-lg tracking-normal">
+            Welcome to Afrika Journals Platform!
+          </h3>
 
           <p>
-            Thank you for visiting our site. While we are constantly updating our data and features, please note
-            that the information and calculations provided are based on our latest indexed publications and
-            may change as more data is added to the platform.
+            Thank you for visiting our site. We are dedicated to improving the visibility of African researchers and their outputs. The data on this platform has been collected using advanced technologies and AI to create profiles of researchers and institutions. While we strive for accuracy, the platform is in its growth phase, and some information may currently be incomplete or require updates.
           </p>
 
           <p>
-            Our team is dedicated to refining, verifying, and linking the extensive data in our database to
-            ensure the highest quality and accuracy. We are addressing inconsistencies in naming and aliases
-            across our data sources, which sometimes originate from the publications of authors and entities
-            on our platform. Consequently, some information about authors and institutions may be
-            incomplete at this stage.
+            Our team is continuously refining the data, addressing inconsistencies, and improving accuracy through the integration of additional verified sources. We are also resolving variations in naming and aliases across publications to ensure cohesive and reliable profiles.
           </p>
 
           <p>
-            Rest assured, our platform still offers valuable insights into the individuals and entities featured.
-            We are committed to adhering to industry standards to resolve these limitations in both the short
-            and long term.
+            We value your input in this process. Researchers and institutions are encouraged to review and update their profiles on the platform, helping us enhance the quality and accuracy of the information. Your contributions will play a vital role in making Afrika Journals Platform a trusted resource for showcasing African scholarship.
           </p>
 
           <p>
-            Thank you for your understanding and support as we work to enhance your experience on Afrika
-            Journals Platform.
+            Please note that the platform is constantly evolving, and as more data is added, the quality and accuracy of the information will continue to improve. We appreciate your patience and support as we work to create a more comprehensive and reliable resource.
+          </p>
+
+          <p>
+            Thank you for being part of this journey to highlight and celebrate African research excellence.
           </p>
         </div>
       </div>
@@ -67,3 +64,4 @@ const DisclaimerPopup: React.FC = () => {
 };
 
 export default DisclaimerPopup;
+
