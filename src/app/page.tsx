@@ -15,7 +15,7 @@ import Link from "next/link";
 import FloatingButton from "../components/FloatingButton/FloatingButton";
 import Journal from "../components/JournalSection/JournalSection";
 import Navbar from "@/components/navbar";
-// import { ThematicAreas } from "../components/ThematicAreas/ThematicAreas";
+import { ThematicAreas } from "../components/ThematicAreas/ThematicAreas";
 import ReportsSection from "../components/ReportsSection/ReportsSection";
 import TestimonialsSection from "../components/Testimonials/TestimonialsSection";
 import WorldMap from "@/components/WorldMap";
@@ -966,7 +966,7 @@ export default function Home() {
         {/*...::: Ticket Slider Section End :::... */}
         
 
-        {/* <ThematicAreas /> */}
+        <ThematicAreas />
 
 
         {/*...::: Content Section Start :::... */}
